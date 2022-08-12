@@ -1,0 +1,107 @@
+<h2 mat-dialog-title>Người dùng</h2>
+<div mat-dialog-content>
+  <form [formGroup]="inputForm">
+    <div class="center-parent">
+      <div class="row">
+        <img class="avatar" [src]="avatarUrl">
+      </div>
+    </div>
+    <div class="center-parent">
+      <div class="row">
+        <p-fileUpload #fubauto mode="basic" name="demo[]" url="./upload.php" accept="image/*" [maxFileSize]="1000000" (onUpload)="onBasicUploadAuto($event)" [auto]="true" chooseLabel="Browse"></p-fileUpload>
+      </div>
+    </div>
+
+
+    <mat-form-field style="width: 50%; padding-right: 0.5em;" appearance="outline">
+      <mat-label>Tên đăng nhập</mat-label>
+      <input [readonly]="this.user" formControlName="UserName" matInput placeholder="Tên đăng nhập">
+    </mat-form-field>
+
+    <mat-form-field style="width: 50%;"  appearance="outline">
+      <mat-label>Họ tên</mat-label>
+      <input formControlName="FullName" matInput placeholder="Họ tên">
+    </mat-form-field>
+
+    <mat-form-field style="width: 100%;"  appearance="outline">
+      <mat-label>Mật khẩu</mat-label>
+      <input formControlName="Password" matInput type="password">
+    </mat-form-field>
+
+    <mat-form-field style="width: 100%;"  appearance="outline">
+      <mat-label>Địa chỉ</mat-label>
+      <input formControlName="DiaChi" matInput placeholder="Địa chỉ">
+    </mat-form-field>
+
+    <mat-form-field style="width: 50%; padding-right: 0.5em;" appearance="outline">
+      <mat-label>Số điện thoại</mat-label>
+      <input formControlName="PhoneNumber" matInput placeholder="Số điện thoại">
+    </mat-form-field>
+
+    <mat-form-field style="width: 50%" appearance="outline">
+      <mat-label>Email</mat-label>
+      <input matInput placeholder="pat@example.com" formControlName="Email" required>
+      <mat-error *ngIf="inputForm.controls['Email'].invalid">{{getErrorMessage()}}</mat-error>
+    </mat-form-field>
+
+    <mat-form-field style="width: 50%; padding-right: 0.5em;" appearance="outline">
+      <mat-label>Ngày sinh</mat-label>
+      <input formControlName="NgaySinh" matInput [matDatepicker]="picker">
+      <mat-hint>MM/DD/YYYY</mat-hint>
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+
+    <mat-form-field style="width: 50%;" appearance="outline">
+      <mat-label>Giới tính</mat-label>
+      <mat-select formControlName="GioiTinh"  placeholder="Giới tính">
+        <mat-option  value="0">Nam</mat-option>
+        <mat-option  value="1">Nữ</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-spinner *ngIf="loading"></mat-spinner>
+    <mat-form-field style="width: 100%;" *ngIf="!loading" appearance="outline">
+      <mat-label>Phòng</mat-label>
+      <mat-select formControlName="Phong"  placeholder="Phòng">
+        <mat-option  *ngFor="let item of depts" [value]="item.MaPhong">{{item.TenPhong}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+
+    <!-- <mat-select formControlName="Phong"  placeholder="Phòng">
+      <mat-option>-- Chọn Phòng --</mat-option>
+      <mat-optgroup *ngFor="let group of pokemonGroups" [label]="group.name"
+                    [disabled]="group.disabled">
+        <mat-option *ngFor="let pokemon of group.pokemon" [value]="pokemon.value">
+          {{pokemon.viewValue}}
+        </mat-option>
+      </mat-optgroup>
+    </mat-select> -->
+
+    <mat-spinner *ngIf="loading"></mat-spinner>
+    <mat-form-field style="width: 100%;" *ngIf="!loading" appearance="outline">
+      <mat-label>Chức danh</mat-label>
+      <mat-select formControlName="Title"  placeholder="Chức danh">
+        <mat-option  *ngFor="let item of chucdanhs" [value]="item.ChucDanh">{{item.ChucDanh}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-spinner *ngIf="loading"></mat-spinner>
+    <mat-form-field style="width: 100%;" *ngIf="!loading" appearance="outline">
+      <mat-label>Nhóm</mat-label>
+      <mat-select formControlName="GroupID"  placeholder="Phòng">
+        <mat-option  *ngFor="let usergroup of usergroups" [value]="usergroup.GroupID">{{usergroup.GroupName}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field style="width: 100%;" appearance="outline">
+      <mat-label>Ghi chú</mat-label>
+      <textarea formControlName="GhiChu" matInput></textarea>
+    </mat-form-field>
+  </form>
+</div>
+<div mat-dialog-actions [align]="'end'">
+  <button mat-raised-button color="bg-danger" mat-dialog-close color="warn"><mat-icon>close</mat-icon> Hủy bỏ</button>
+  <!-- <button (click)="addUser()" mat-raised-button color="primary"><mat-icon>save</mat-icon> {{actionBtn}}</button> -->
+</div>

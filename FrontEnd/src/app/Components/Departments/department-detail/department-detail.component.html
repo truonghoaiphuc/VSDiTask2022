@@ -1,0 +1,31 @@
+<h2 mat-dialog-title>Phòng ban</h2>
+<mat-spinner *ngIf="loading"></mat-spinner>
+<div mat-dialog-content *ngIf="!loading">
+  <form [formGroup]="inputForm">
+    <mat-form-field appearance="outline">
+      <mat-label>Mã Phòng</mat-label>
+      <input [readonly]="this.dept" formControlName="MaPhong" matInput placeholder="Mã Phòng">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Tên Phòng</mat-label>
+      <input formControlName="TenPhong" matInput placeholder="Tên Phòng">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Trực thuộc</mat-label>
+      <mat-select formControlName="TrucThuoc"  placeholder="Trực thuộc">
+        <mat-option  *ngFor="let item of companies" [value]="item.maCty">{{item.tenCty}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Ghi chú</mat-label>
+      <textarea formControlName="GhiChu" matInput placeholder="Ghi chú"></textarea>
+    </mat-form-field>
+  </form>
+</div>
+<div mat-dialog-actions [align]="'end'">
+  <button mat-raised-button color="bg-danger" mat-dialog-close color="warn"><mat-icon>close</mat-icon> Hủy bỏ</button>
+  <button (click)="addDept()" mat-raised-button color="primary"><mat-icon>save</mat-icon> {{actionBtn}}</button>
+</div>

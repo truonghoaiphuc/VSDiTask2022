@@ -1,0 +1,29 @@
+<h2 mat-dialog-title>Add Product Form</h2>
+<div mat-dialog-content>
+  <form [formGroup]="inputForm">
+    <mat-form-field appearance="outline">
+      <mat-label>Mã Công ty</mat-label>
+      <input [readonly]="this.company" formControlName="MaCty" matInput placeholder="Mã công ty">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Tên Công ty</mat-label>
+      <input formControlName="TenCty" matInput placeholder="Tên công ty">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Địa chỉ</mat-label>
+      <input formControlName="DiaChi" matInput placeholder="Địa chỉ">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Ghi chú</mat-label>
+      <textarea formControlName="GhiChu" matInput></textarea>
+    </mat-form-field>
+  </form>
+</div>
+<div mat-dialog-actions [align]="'end'">
+  <button mat-raised-button color="bg-danger" mat-dialog-close color="warn"><mat-icon>close</mat-icon> Hủy bỏ</button>
+  <button (click)="addCompany()" mat-raised-button color="primary"><mat-icon>save</mat-icon> {{actionBtn}}</button>
+</div>
+

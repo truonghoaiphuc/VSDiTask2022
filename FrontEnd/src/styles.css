@@ -1,0 +1,12 @@
+/* You can add global styles to this file, and also import other style files */
+body{
+  font-family:"SF Pro Display" !important;
+  background-color: #D9EFF7 !important;
+  padding: 2em;
+  height: 100%;
+}
+.contact-img{
+  width: 150px;
+  border-radius: 50%;
+}
+

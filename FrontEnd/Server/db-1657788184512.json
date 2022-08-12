@@ -1,0 +1,20 @@
+{
+  "users": [],
+  "CongTy": [
+    {
+      "MaCty": "VSD",
+      "TenCty": "Trung tâm Lưu ký Chứng khoán Việt Nam",
+      "GhiChu": "TSCHN",
+      "id": 1
+    },
+    {
+      "MaCty": "CNVSD",
+      "TenCty": "Trung tâm Lưu ký Chứng khoán Việt Nam  Chi nhánh tại TPHCM",
+      "GhiChu": "CNVSD",
+      "id": 2
+    }
+  ],
+  "PhongBan": [],
+  "ChucNang": [],
+  "PhanQuyen": []
+}

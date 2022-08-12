@@ -1,0 +1,119 @@
+{
+  "users": [
+    {
+      "UserName": "phucth",
+      "FullName": "Trương Hoài Phúc",
+      "Password": "1234",
+      "DiaChi": "Số 1 Nam Kỳ Khởi Nghĩa",
+      "NgaySinh": "1985-10-15T17:00:00.000Z",
+      "PhoneNumber": "0979778828",
+      "Email": "phucth@vsd.vn",
+      "GioiTinh": "0",
+      "GroupID": "Administrator",
+      "Title": "Chuyên viên",
+      "Phong": "KTQT",
+      "PhotoURL": "assets/images/phucth.jpg",
+      "GhiChu": "",
+      "id": 1
+    },
+    {
+      "UserName": "kienct",
+      "FullName": "Chu Trung Kiên",
+      "Password": "12344",
+      "DiaChi": "Số 1 Nam Kỳ Khởi Nghĩa",
+      "NgaySinh": "1981-12-31T17:00:00.000Z",
+      "PhoneNumber": "090909090",
+      "Email": "kienct@vsd.vn",
+      "GioiTinh": "0",
+      "GroupID": "Administrator",
+      "Title": "Chuyên viên",
+      "Phong": "DKCN",
+      "GhiChu": "",
+      "id": 2
+    },
+    {
+      "UserName": "kienvt",
+      "FullName": "Văn Trung Kiên",
+      "Password": "1234",
+      "DiaChi": "Số 1 NKKN",
+      "NgaySinh": "1970-12-31T16:00:00.000Z",
+      "PhoneNumber": "0909686868",
+      "Email": "kienvt@vsd.vn",
+      "GioiTinh": "0",
+      "GroupID": "SeniorOfficial",
+      "Title": "Chuyên viên",
+      "Phong": "LKCN",
+      "GhiChu": "",
+      "id": 3
+    }
+  ],
+  "usergroup": [
+    {
+      "GroupID": "Administrator",
+      "GroupName": "Quản trị viên",
+      "GhiChu": "",
+      "id": 1
+    },
+    {
+      "GroupID": "SeniorOfficial",
+      "GroupName": "Chuyên viên",
+      "GhiChu": "",
+      "id": 2
+    }
+  ],
+  "Title": [
+    {
+      "id": 1,
+      "ChucDanh": "Tổng giám đốc"
+    },
+    {
+      "id": 2,
+      "ChucDanh": "Trưởng Phòng"
+    },
+    {
+      "id": 3,
+      "ChucDanh": "Chuyên viên"
+    }
+  ],
+  "CongTy": [
+    {
+      "MaCty": "VSD",
+      "TenCty": "Trung tâm Lưu ký Chứng khoán Việt Nam",
+      "DiaChi": "112 Hoàng Quốc Việt, P. Cổ Nhuế 1, Q. Nam Từ Liêm, Hà Nội",
+      "GhiChu": "",
+      "id": 1
+    },
+    {
+      "MaCty": "CNVSD",
+      "TenCty": "Trung tâm Lưu ký Chứng khoán Việt Nam - Chi nhánh tại TPHCM",
+      "DiaChi": "Tầng 7 Tòa nhà Exchange Tower, Số 1 Nam Kỳ Khởi Nghĩa, P. Nguyễn Thái Bình, Q.1, TP.HCM",
+      "GhiChu": "",
+      "id": 2
+    }
+  ],
+  "PhongBan": [
+    {
+      "MaPhong": "KTQT",
+      "TenPhong": "Phòng Kế toán - Quản trị Chi nhánh",
+      "ChiNhanh": "CNVSD",
+      "GhiChu": "",
+      "id": 2
+    },
+    {
+      "MaPhong": "DKCN",
+      "TenPhong": "Phòng Đăng ký Chứng khoán Chi nhánh",
+      "ChiNhanh": "CNVSD",
+      "GhiChu": "",
+      "id": 3
+    },
+    {
+      "MaPhong": "LKCN",
+      "TenPhong": "Phòng Lưu Ký Chứng Khoán Chi nhánh",
+      "ChiNhanh": "CNVSD",
+      "GhiChu": "",
+      "id": 4
+    }
+  ],
+  "ChucNang": [],
+  "PhanQuyen": []
+}
