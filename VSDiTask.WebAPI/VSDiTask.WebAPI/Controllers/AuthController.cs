@@ -32,12 +32,13 @@ namespace VSDiTask.WebAPI.Controllers
 
             if (valid)
             {
-                var usertoken = await _userService.GetUserTokenInfoAsync(user.UserName);
-                var token = _tokenService.GetToken(usertoken, 60);
+                var userInfo = await _userService.GetUserInfoAsync(user.UserName);
+                var token = _tokenService.GetToken(userInfo, 60);
 
                 return Ok(new
                 {
                     token,
+                    userInfo
                 });
             }
             return BadRequest(new

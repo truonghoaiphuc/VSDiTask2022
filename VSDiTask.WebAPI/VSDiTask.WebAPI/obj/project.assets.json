@@ -889,10 +889,21 @@
           }
         }
       },
+      "VSDiTask.Common.Extensions/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/VSDiTask.Common.Extensions.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/VSDiTask.Common.Extensions.dll": {}
+        }
+      },
       "VSDiTask.Core/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
+          "Microsoft.AspNetCore.Authentication.JwtBearer": "6.0.8",
           "Microsoft.EntityFrameworkCore": "6.0.8",
           "Microsoft.EntityFrameworkCore.Relational": "6.0.8",
           "Microsoft.EntityFrameworkCore.SqlServer": "6.0.8",
@@ -925,6 +936,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
+          "VSDiTask.Common.Extensions": "1.0.0",
           "VSDiTask.Infrastructure": "1.0.0"
         },
         "compile": {
@@ -2307,6 +2319,11 @@
         "version.txt"
       ]
     },
+    "VSDiTask.Common.Extensions/1.0.0": {
+      "type": "project",
+      "path": "../VSdiTask.Common.Extensions/VSDiTask.Common.Extensions.csproj",
+      "msbuildProject": "../VSdiTask.Common.Extensions/VSDiTask.Common.Extensions.csproj"
+    },
     "VSDiTask.Core/1.0.0": {
       "type": "project",
       "path": "../VSDiTask.Data/VSDiTask.Core.csproj",
@@ -2328,7 +2345,6 @@
       "Microsoft.AspNetCore.Authentication.JwtBearer >= 6.0.8",
       "Swashbuckle.AspNetCore >= 6.2.3",
       "System.Configuration.ConfigurationManager >= 4.7.0",
-      "VSDiTask.Infrastructure >= 1.0.0",
       "VSDiTask.Users >= 1.0.0"
     ]
   },
@@ -2359,9 +2375,6 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "E:\\Code\\VSDiTasks\\VSDiTask.WebAPI\\VSDiTask.Infrastructure\\VSDiTask.Infrastructure.csproj": {
-              "projectPath": "E:\\Code\\VSDiTasks\\VSDiTask.WebAPI\\VSDiTask.Infrastructure\\VSDiTask.Infrastructure.csproj"
-            },
             "E:\\Code\\VSDiTasks\\VSDiTask.WebAPI\\VSDiTask.Users\\VSDiTask.Users.csproj": {
               "projectPath": "E:\\Code\\VSDiTasks\\VSDiTask.WebAPI\\VSDiTask.Users\\VSDiTask.Users.csproj"
             }

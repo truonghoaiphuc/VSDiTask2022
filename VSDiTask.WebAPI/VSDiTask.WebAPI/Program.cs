@@ -20,6 +20,8 @@ builder.Services
     .AddInternalServices(builder.Configuration)
     .AddUserServices()
     .AddControllers();
+builder.Services.AddJwtAuthenticationService(builder.Configuration);
+
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();

@@ -66,3 +66,5 @@ E:\Code\VSDiTasks\VSDiTask.WebAPI\VSDiTask.WebAPI\bin\Debug\net6.0\VSDiTask.User
 E:\Code\VSDiTasks\VSDiTask.WebAPI\VSDiTask.WebAPI\bin\Debug\net6.0\VSDiTask.Core.pdb
 E:\Code\VSDiTasks\VSDiTask.WebAPI\VSDiTask.WebAPI\bin\Debug\net6.0\Humanizer.dll
 E:\Code\VSDiTasks\VSDiTask.WebAPI\VSDiTask.WebAPI\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
+E:\Code\VSDiTasks\VSDiTask.WebAPI\VSDiTask.WebAPI\bin\Debug\net6.0\VSDiTask.Common.Extensions.dll
+E:\Code\VSDiTasks\VSDiTask.WebAPI\VSDiTask.WebAPI\bin\Debug\net6.0\VSDiTask.Common.Extensions.pdb

@@ -13,7 +13,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\VSDiTask.Infrastructure\VSDiTask.Infrastructure.csproj" />
     <ProjectReference Include="..\VSDiTask.Users\VSDiTask.Users.csproj" />
   </ItemGroup>
 
