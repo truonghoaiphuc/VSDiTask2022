@@ -48,6 +48,7 @@ import { UserListComponent } from './Components/Users/user-list/user-list.compon
 import { UserDetailComponent } from './Components/Users/user-detail/user-detail.component';
 import {FileUploadModule} from 'primeng/fileupload';
 import { LoginComponent } from './Components/login/login.component';
+import { AuthorizedComponent } from './layout/authorized/authorized.component';
 
 @NgModule({
   declarations: [
@@ -61,7 +62,8 @@ import { LoginComponent } from './Components/login/login.component';
     UsergroupDetailComponent,
     UserListComponent,
     UserDetailComponent,
-    LoginComponent
+    LoginComponent,
+    AuthorizedComponent
   ],
   imports: [
     BrowserModule,

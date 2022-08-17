@@ -1,29 +1,64 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { catchError } from 'rxjs';
+import { catchError, Observable, of } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { SystemConstants } from '../commons/constants/system.constants';
-import { IUser } from '../Models/IUser';
 import { LoggedInUser } from '../Models/LoggedInUser';
+import { CurrentUser } from '../Models/User.model';
+import { StorageService } from './storage.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthenService {
 
-  constructor(private _http : HttpClient){}
+  constructor(private _http : HttpClient, private _storage: StorageService){}
 
-  public login(usercred : any){
-    return this._http.post(`${environment.BASE_API}/api/Authentication/Login`, usercred);
+  public login(usercred : any):Observable<string> {
+    return this._http.post<string>(`${environment.BASE_API}/api/auth/login`, usercred);
   }
 
-  logout() {
-    localStorage.removeItem(SystemConstants.CURRENT_USER);
+  persistToken(token: string) {
+    this._storage.set(SystemConstants.CURRENT_USER,token);
   }
 
-  isUserAuthenticated(): boolean {
-    return localStorage.getItem(SystemConstants.CURRENT_USER)!= null;
+  logout(): void {
+    this._storage.set(SystemConstants.CURRENT_USER, null);
   }
+
+  isUserAuthenticated(): Observable<boolean> {
+    return of(localStorage.getItem(SystemConstants.CURRENT_USER)!= null);
+  }
+
+  getCurrentUser():Observable<CurrentUser | null> {
+    const token = this._storage.get(SystemConstants.CURRENT_USER);
+    if(!token){
+      return of(null);
+    }   
+    
+    let claims: any;
+
+    try{
+
+    } catch{
+      return of(null);
+    }
+
+    //check expiry
+    if(!claims || Date.now().valueOf() > claims.expiry*1000){
+      return of(null);
+    }
+
+    const user: CurrentUser={
+      userName : claims["http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier"] as string,
+      fullName : claims["http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name"] as string,
+      role : claims["http://schemas.microsoft.com/ws/2008/06/identity/claims/role"] as string
+  
+    };
+
+    return of(user);
+  }
+
 
   getLoggedInUser(): LoggedInUser {
     let user !: LoggedInUser;

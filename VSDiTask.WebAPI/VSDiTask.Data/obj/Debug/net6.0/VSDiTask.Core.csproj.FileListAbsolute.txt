@@ -12,3 +12,17 @@ E:\Code\VSDiTasks\VSDiTask.WebAPI\VSDiTask.Data\obj\Debug\net6.0\VSDiTask.Core.p
 E:\Code\VSDiTasks\VSDiTask.WebAPI\VSDiTask.Data\obj\Debug\net6.0\ref\VSDiTask.Core.dll
 E:\Code\VSDiTasks\VSDiTask.WebAPI\VSDiTask.Data\bin\Debug\net6.0\VSDiTask.Core.runtimeconfig.json
 E:\Code\VSDiTasks\VSDiTask.WebAPI\VSDiTask.Data\obj\Debug\net6.0\VSDiTask.Core.genruntimeconfig.cache
+E:\Coding\VSDiTask\VSDiTask.WebAPI\VSDiTask.Data\bin\Debug\net6.0\VSDiTask.Core.deps.json
+E:\Coding\VSDiTask\VSDiTask.WebAPI\VSDiTask.Data\bin\Debug\net6.0\VSDiTask.Core.runtimeconfig.json
+E:\Coding\VSDiTask\VSDiTask.WebAPI\VSDiTask.Data\bin\Debug\net6.0\VSDiTask.Core.dll
+E:\Coding\VSDiTask\VSDiTask.WebAPI\VSDiTask.Data\bin\Debug\net6.0\VSDiTask.Core.pdb
+E:\Coding\VSDiTask\VSDiTask.WebAPI\VSDiTask.Data\obj\Debug\net6.0\VSDiTask.Core.csproj.AssemblyReference.cache
+E:\Coding\VSDiTask\VSDiTask.WebAPI\VSDiTask.Data\obj\Debug\net6.0\VSDiTask.Core.GeneratedMSBuildEditorConfig.editorconfig
+E:\Coding\VSDiTask\VSDiTask.WebAPI\VSDiTask.Data\obj\Debug\net6.0\VSDiTask.Core.AssemblyInfoInputs.cache
+E:\Coding\VSDiTask\VSDiTask.WebAPI\VSDiTask.Data\obj\Debug\net6.0\VSDiTask.Core.AssemblyInfo.cs
+E:\Coding\VSDiTask\VSDiTask.WebAPI\VSDiTask.Data\obj\Debug\net6.0\VSDiTask.Core.csproj.CoreCompileInputs.cache
+E:\Coding\VSDiTask\VSDiTask.WebAPI\VSDiTask.Data\obj\Debug\net6.0\VSDiTask.Core.dll
+E:\Coding\VSDiTask\VSDiTask.WebAPI\VSDiTask.Data\obj\Debug\net6.0\refint\VSDiTask.Core.dll
+E:\Coding\VSDiTask\VSDiTask.WebAPI\VSDiTask.Data\obj\Debug\net6.0\VSDiTask.Core.pdb
+E:\Coding\VSDiTask\VSDiTask.WebAPI\VSDiTask.Data\obj\Debug\net6.0\VSDiTask.Core.genruntimeconfig.cache
+E:\Coding\VSDiTask\VSDiTask.WebAPI\VSDiTask.Data\obj\Debug\net6.0\ref\VSDiTask.Core.dll

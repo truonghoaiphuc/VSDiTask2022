@@ -8,7 +8,7 @@ namespace VSDiTask.Infrastructure.data.configuration
     {
         public void Configure(EntityTypeBuilder<Company> builder)
         {
-            builder.ToTable("Product", "products");
+            builder.ToTable("Companies");
 
             builder.Property(x => x.CompanyName)
                 .IsRequired()

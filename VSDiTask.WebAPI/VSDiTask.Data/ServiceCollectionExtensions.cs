@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
+using VSDiTask.Core.Data;
 using VSDiTask.Infrastructure;
 
 namespace VSDiTask.Core

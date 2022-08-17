@@ -11,7 +11,7 @@
           "Microsoft.AspNetCore.Authentication.JwtBearer": "6.0.8",
           "Swashbuckle.AspNetCore": "6.2.3",
           "System.Configuration.ConfigurationManager": "4.7.0",
-          "VSDiTask.Infrastructure": "1.0.0",
+          "VSDiTask.Core": "1.0.0",
           "VSDiTask.Users": "1.0.0"
         },
         "runtime": {
@@ -493,6 +493,11 @@
           }
         }
       },
+      "VSDiTask.Common.Extensions/1.0.0": {
+        "runtime": {
+          "VSDiTask.Common.Extensions.dll": {}
+        }
+      },
       "VSDiTask.Core/1.0.0": {
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "6.0.8",
@@ -505,19 +510,10 @@
           "VSDiTask.Core.dll": {}
         }
       },
-      "VSDiTask.Infrastructure/1.0.0": {
-        "dependencies": {
-          "Microsoft.EntityFrameworkCore": "6.0.8",
-          "Microsoft.EntityFrameworkCore.SqlServer": "6.0.8",
-          "VSDiTask.Core": "1.0.0"
-        },
-        "runtime": {
-          "VSDiTask.Infrastructure.dll": {}
-        }
-      },
       "VSDiTask.Users/1.0.0": {
         "dependencies": {
-          "VSDiTask.Infrastructure": "1.0.0"
+          "VSDiTask.Common.Extensions": "1.0.0",
+          "VSDiTask.Core": "1.0.0"
         },
         "runtime": {
           "VSDiTask.Users.dll": {}
@@ -881,12 +877,12 @@
       "path": "system.windows.extensions/4.7.0",
       "hashPath": "system.windows.extensions.4.7.0.nupkg.sha512"
     },
-    "VSDiTask.Core/1.0.0": {
+    "VSDiTask.Common.Extensions/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
     },
-    "VSDiTask.Infrastructure/1.0.0": {
+    "VSDiTask.Core/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
