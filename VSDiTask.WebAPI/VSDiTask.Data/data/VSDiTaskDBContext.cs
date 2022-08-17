@@ -2,7 +2,7 @@
 using VSDiTask.Core.Entities;
 using VSDiTask.Infrastructure.data.configuration;
 
-namespace VSDiTask.Core.Data
+namespace VSDiTask.Infrastructure
 {
     public class VSDiTaskDBContext : DbContext
     {
@@ -13,13 +13,16 @@ namespace VSDiTask.Core.Data
         }
 
         public DbSet<Company> Companies { get; set; }
-        public DbSet<User> Users { get; set; }
+
+        //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        //{
+        //    optionsBuilder.UseSqlServer(@"Server=PHUCTH\\SQLSERVER2012;Database=VSDiTasks2022;User Id=sa;Password=backinh27;");
+        //}
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
             modelBuilder.ApplyConfiguration(new CompanyConfiguration());
-            modelBuilder.ApplyConfiguration(new UserConfiguration());
         }
     }
 }

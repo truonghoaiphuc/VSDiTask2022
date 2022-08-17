@@ -889,16 +889,6 @@
           }
         }
       },
-      "VSDiTask.Common.Extensions/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v6.0",
-        "compile": {
-          "bin/placeholder/VSDiTask.Common.Extensions.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/VSDiTask.Common.Extensions.dll": {}
-        }
-      },
       "VSDiTask.Core/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
@@ -916,12 +906,26 @@
           "bin/placeholder/VSDiTask.Core.dll": {}
         }
       },
+      "VSDiTask.Infrastructure/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "6.0.8",
+          "Microsoft.EntityFrameworkCore.SqlServer": "6.0.8",
+          "VSDiTask.Core": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/VSDiTask.Infrastructure.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/VSDiTask.Infrastructure.dll": {}
+        }
+      },
       "VSDiTask.Users/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
-          "VSDiTask.Common.Extensions": "1.0.0",
-          "VSDiTask.Core": "1.0.0"
+          "VSDiTask.Infrastructure": "1.0.0"
         },
         "compile": {
           "bin/placeholder/VSDiTask.Users.dll": {}
@@ -2303,15 +2307,15 @@
         "version.txt"
       ]
     },
-    "VSDiTask.Common.Extensions/1.0.0": {
-      "type": "project",
-      "path": "../VSdiTask.Common.Extensions/VSDiTask.Common.Extensions.csproj",
-      "msbuildProject": "../VSdiTask.Common.Extensions/VSDiTask.Common.Extensions.csproj"
-    },
     "VSDiTask.Core/1.0.0": {
       "type": "project",
       "path": "../VSDiTask.Data/VSDiTask.Core.csproj",
       "msbuildProject": "../VSDiTask.Data/VSDiTask.Core.csproj"
+    },
+    "VSDiTask.Infrastructure/1.0.0": {
+      "type": "project",
+      "path": "../VSDiTask.Infrastructure/VSDiTask.Infrastructure.csproj",
+      "msbuildProject": "../VSDiTask.Infrastructure/VSDiTask.Infrastructure.csproj"
     },
     "VSDiTask.Users/1.0.0": {
       "type": "project",
@@ -2324,24 +2328,24 @@
       "Microsoft.AspNetCore.Authentication.JwtBearer >= 6.0.8",
       "Swashbuckle.AspNetCore >= 6.2.3",
       "System.Configuration.ConfigurationManager >= 4.7.0",
-      "VSDiTask.Core >= 1.0.0",
+      "VSDiTask.Infrastructure >= 1.0.0",
       "VSDiTask.Users >= 1.0.0"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Administrator\\.nuget\\packages\\": {}
+    "C:\\Users\\truon\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Coding\\VSDiTask\\VSDiTask.WebAPI\\VSDiTask.WebAPI\\VSDiTask.WebAPI.csproj",
+      "projectUniqueName": "E:\\Code\\VSDiTasks\\VSDiTask.WebAPI\\VSDiTask.WebAPI\\VSDiTask.WebAPI.csproj",
       "projectName": "VSDiTask.WebAPI",
-      "projectPath": "E:\\Coding\\VSDiTask\\VSDiTask.WebAPI\\VSDiTask.WebAPI\\VSDiTask.WebAPI.csproj",
-      "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-      "outputPath": "E:\\Coding\\VSDiTask\\VSDiTask.WebAPI\\VSDiTask.WebAPI\\obj\\",
+      "projectPath": "E:\\Code\\VSDiTasks\\VSDiTask.WebAPI\\VSDiTask.WebAPI\\VSDiTask.WebAPI.csproj",
+      "packagesPath": "C:\\Users\\truon\\.nuget\\packages\\",
+      "outputPath": "E:\\Code\\VSDiTasks\\VSDiTask.WebAPI\\VSDiTask.WebAPI\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\truon\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -2349,17 +2353,17 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "https://api.nuget.org/v3/index.json": {}
+        "https://www.nuget.org/api/v2/curated-feeds/microsoftdotnet/": {}
       },
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "E:\\Coding\\VSDiTask\\VSDiTask.WebAPI\\VSDiTask.Data\\VSDiTask.Core.csproj": {
-              "projectPath": "E:\\Coding\\VSDiTask\\VSDiTask.WebAPI\\VSDiTask.Data\\VSDiTask.Core.csproj"
+            "E:\\Code\\VSDiTasks\\VSDiTask.WebAPI\\VSDiTask.Infrastructure\\VSDiTask.Infrastructure.csproj": {
+              "projectPath": "E:\\Code\\VSDiTasks\\VSDiTask.WebAPI\\VSDiTask.Infrastructure\\VSDiTask.Infrastructure.csproj"
             },
-            "E:\\Coding\\VSDiTask\\VSDiTask.WebAPI\\VSDiTask.Users\\VSDiTask.Users.csproj": {
-              "projectPath": "E:\\Coding\\VSDiTask\\VSDiTask.WebAPI\\VSDiTask.Users\\VSDiTask.Users.csproj"
+            "E:\\Code\\VSDiTasks\\VSDiTask.WebAPI\\VSDiTask.Users\\VSDiTask.Users.csproj": {
+              "projectPath": "E:\\Code\\VSDiTasks\\VSDiTask.WebAPI\\VSDiTask.Users\\VSDiTask.Users.csproj"
             }
           }
         }

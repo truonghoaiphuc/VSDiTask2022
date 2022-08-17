@@ -1,4 +1,4 @@
-﻿using VSDiTask.Core.Data;
+﻿using VSDiTask.Infrastructure;
 
 namespace VSDiTask.Services.Services
 {

@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 
-namespace VSDiTask.Core.Data
+namespace VSDiTask.Infrastructure
 {
     public interface IVSDiTaskDbContextFactory : IDbContextFactory<VSDiTaskDBContext>
     {

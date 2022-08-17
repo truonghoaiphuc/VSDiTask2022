@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using VSDiTask.Infrastructure;
 
@@ -10,9 +11,10 @@ using VSDiTask.Infrastructure;
 namespace VSDiTask.Core.Migrations
 {
     [DbContext(typeof(VSDiTaskDBContext))]
-    partial class VSDiTaskDBContextModelSnapshot : ModelSnapshot
+    [Migration("20220812101441_initDB")]
+    partial class initDB
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

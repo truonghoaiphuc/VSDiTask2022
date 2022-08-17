@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
-using VSDiTask.Core.Data;
+using VSDiTask.Infrastructure;
 
 namespace VSDiTask.WebAPI
 {
