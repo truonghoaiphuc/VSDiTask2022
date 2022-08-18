@@ -23,7 +23,7 @@ namespace VSDiTask.Users.Services
         public Task<UserToken> GetUserTokenInfoAsync(string username)
         {
             using var context = _dbContextFactory.CreateDbContext();
-            return context.Users
+            return context.AppUsers
                 .Where(x => x.UserName == username)
                 .Select(x => new UserToken
                 {
@@ -39,7 +39,7 @@ namespace VSDiTask.Users.Services
             using var context = _dbContextFactory.CreateDbContext();
 
             var hash = HashExtensions.Hash(user.Password);
-            var valid = await context.Users
+            var valid = await context.AppUsers
                 .Where(u => u.UserName == user.UserName && u.Password == hash)
                 .AnyAsync();
             return valid;

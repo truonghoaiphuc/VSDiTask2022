@@ -1,85 +1,121 @@
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { catchError, Observable, of } from 'rxjs';
+import {
+  BehaviorSubject,
+  concat,
+  filter,
+  Observable,
+  of,
+  take,
+  tap,
+  map,
+} from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { SystemConstants } from '../commons/constants/system.constants';
 import { LoggedInUser } from '../Models/LoggedInUser';
-import { CurrentUser } from '../Models/User.model';
 import { StorageService } from './storage.service';
+import jwt_decode from 'jwt-decode';
+import { CurrentUser } from '../Models/user.model';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class AuthenService {
+  constructor(private _http: HttpClient, private _storage: StorageService) {}
 
-  constructor(private _http : HttpClient, private _storage: StorageService){}
-
-  public login(usercred : any):Observable<string> {
-    return this._http.post<string>(`${environment.BASE_API}/api/auth/login`, usercred);
-  }
+  private _userSubject = new BehaviorSubject<CurrentUser | null>(null);
 
   persistToken(token: string) {
-    this._storage.set(SystemConstants.CURRENT_USER,token);
+    this._storage.set(SystemConstants.CURRENT_USER, token);
   }
 
-  logout(): void {
+  getToken(): Observable<string | null> {
+    return of(this._storage.get(SystemConstants.CURRENT_USER) || '');
+  }
+
+  clearToken() {
     this._storage.set(SystemConstants.CURRENT_USER, null);
   }
 
-  isUserAuthenticated(): Observable<boolean> {
-    return of(localStorage.getItem(SystemConstants.CURRENT_USER)!= null);
+  logout(): void {
+    this.clearToken();
   }
 
-  getCurrentUser():Observable<CurrentUser | null> {
+  isUserAuthenticated(): Observable<boolean> {
+    return this.getUser().pipe(map((u) => !!u));
+  }
+
+  getUser() {
+    return concat(
+      this._userSubject.pipe(
+        take(1),
+        filter((u) => !!u)
+      ),
+      this.getCurrentUser().pipe(
+        filter((u) => !!u),
+        tap((u) => this._userSubject.next(u))
+      ),
+      this._userSubject.asObservable()
+    );
+  }
+
+  getCurrentUser(): Observable<CurrentUser | null> {
     const token = this._storage.get(SystemConstants.CURRENT_USER);
-    if(!token){
+    if (!token) {
       return of(null);
-    }   
-    
+    }
+
     let claims: any;
 
-    try{
-
-    } catch{
+    try {
+      claims = jwt_decode(token);
+    } catch {
       return of(null);
     }
 
     //check expiry
-    if(!claims || Date.now().valueOf() > claims.expiry*1000){
+    if (!claims || Date.now().valueOf() > claims.expiry * 1000) {
       return of(null);
     }
 
-    const user: CurrentUser={
-      userName : claims["http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier"] as string,
-      fullName : claims["http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name"] as string,
-      role : claims["http://schemas.microsoft.com/ws/2008/06/identity/claims/role"] as string
-  
+    const user: CurrentUser = {
+      userName: claims[
+        'http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier'
+      ] as string,
+      fullName: claims[
+        'http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name'
+      ] as string,
+      role: claims[
+        'http://schemas.microsoft.com/ws/2008/06/identity/claims/role'
+      ] as string,
     };
 
     return of(user);
   }
 
-
   getLoggedInUser(): LoggedInUser {
-    let user !: LoggedInUser;
+    let user!: LoggedInUser;
     if (this.isUserAuthenticated()) {
       var usdata = localStorage.getItem(SystemConstants.CURRENT_USER);
-      if(usdata != null){
+      if (usdata != null) {
         var userData = JSON.parse(usdata);
-        user = new LoggedInUser(userData.access_token,
+        user = new LoggedInUser(
+          userData.access_token,
           userData.username,
           userData.fullName,
           userData.email,
           userData.Phong,
           userData.Title,
-          userData.avatar, userData.roles, userData.permissions);
+          userData.avatar,
+          userData.roles,
+          userData.permissions
+        );
       }
       // var userData =
       //  JSON.parse(localStorage.getItem(SystemConstants.CURRENT_USER));
     }
     return user;
   }
-
 
   // checkAccess(functionId: string) {
   //   var user = this.getLoggedInUser();

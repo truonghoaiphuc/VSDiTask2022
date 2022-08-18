@@ -7,19 +7,17 @@ import { LoginComponent } from './login/login.component';
 import { MatCardModule } from '@angular/material/card';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
-
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
-  declarations: [
-    UnauthorizedComponent,
-    LoginComponent
-  ],
+  declarations: [UnauthorizedComponent, LoginComponent],
   imports: [
     CommonModule,
     MatCardModule,
     MatFormFieldModule,
     ReactiveFormsModule,
-    UnauthorizedRoutingModule
-  ]
+    UnauthorizedRoutingModule,
+    HttpClientModule,
+  ],
 })
-export class UnauthorizedModule { }
+export class UnauthorizedModule {}

@@ -5,50 +5,51 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavbarComponent } from './commons/navbar/navbar.component';
-import{HttpClientModule} from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
-import {MatToolbarModule} from '@angular/material/toolbar';
-import {MatCardModule} from '@angular/material/card';
-import {MatFormFieldModule} from '@angular/material/form-field';
-import {MatInputModule} from '@angular/material/input';
-import {MatIconModule} from '@angular/material/icon';
-import {MatButtonModule} from '@angular/material/button';
-import {DragDropModule} from '@angular/cdk/drag-drop';
-import {MatDialogModule} from '@angular/material/dialog';
-import {MatSelectModule} from '@angular/material/select';
-import {MatDatepickerModule} from '@angular/material/datepicker';
-import {MatNativeDateModule} from '@angular/material/core';
-import {MatRadioModule} from '@angular/material/radio';
-import {MatTableModule} from '@angular/material/table';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatCardModule } from '@angular/material/card';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
+import { DragDropModule } from '@angular/cdk/drag-drop';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatSelectModule } from '@angular/material/select';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
+import { MatRadioModule } from '@angular/material/radio';
+import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import { CompanyListComponent } from './Components/Company/company-list/company-list.component';
 import { CompanyDetailComponent } from './Components/Company/company-detail/company-detail.component';
-import {ToastModule} from 'primeng/toast';
+import { ToastModule } from 'primeng/toast';
 import { CommonModule } from '@angular/common';
 
-import {ToolbarModule} from 'primeng/toolbar';
-import {TableModule} from 'primeng/table';
-import {ButtonModule} from 'primeng/button';
-import {InputTextModule} from 'primeng/inputtext';
-import {InputTextareaModule} from 'primeng/inputtextarea';
-import {DialogService, DynamicDialogModule} from 'primeng/dynamicdialog';
+import { ToolbarModule } from 'primeng/toolbar';
+import { TableModule } from 'primeng/table';
+import { ButtonModule } from 'primeng/button';
+import { InputTextModule } from 'primeng/inputtext';
+import { InputTextareaModule } from 'primeng/inputtextarea';
+import { DialogService, DynamicDialogModule } from 'primeng/dynamicdialog';
 import { ConfirmationService, MessageService } from 'primeng/api';
-import {ConfirmPopupModule} from 'primeng/confirmpopup';
-import {ConfirmDialogModule} from 'primeng/confirmdialog';
-import {CardModule} from 'primeng/card';
-import {AvatarModule} from 'primeng/avatar';
+import { ConfirmPopupModule } from 'primeng/confirmpopup';
+import { ConfirmDialogModule } from 'primeng/confirmdialog';
+import { CardModule } from 'primeng/card';
+import { AvatarModule } from 'primeng/avatar';
 import { DepartmentListComponent } from './Components/Departments/department-list/department-list.component';
 import { DepartmentDetailComponent } from './Components/Departments/department-detail/department-detail.component';
-import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { UsergroupListComponent } from './Components/UserGroup/usergroup-list/usergroup-list.component';
 import { UsergroupDetailComponent } from './Components/UserGroup/usergroup-detail/usergroup-detail.component';
 import { UserListComponent } from './Components/Users/user-list/user-list.component';
 import { UserDetailComponent } from './Components/Users/user-detail/user-detail.component';
-import {FileUploadModule} from 'primeng/fileupload';
+import { FileUploadModule } from 'primeng/fileupload';
 import { LoginComponent } from './Components/login/login.component';
 import { AuthorizedComponent } from './layout/authorized/authorized.component';
+import { AuthorizeInterceptor } from './interceptors/authorize.interceptor';
 
 @NgModule({
   declarations: [
@@ -63,7 +64,7 @@ import { AuthorizedComponent } from './layout/authorized/authorized.component';
     UserListComponent,
     UserDetailComponent,
     LoginComponent,
-    AuthorizedComponent
+    AuthorizedComponent,
   ],
   imports: [
     BrowserModule,
@@ -100,9 +101,14 @@ import { AuthorizedComponent } from './layout/authorized/authorized.component';
     CardModule,
     AvatarModule,
     MatProgressSpinnerModule,
-    FileUploadModule
+    FileUploadModule,
   ],
-  providers: [MessageService,ConfirmationService, DialogService],
-  bootstrap: [AppComponent]
+  providers: [
+    MessageService,
+    ConfirmationService,
+    DialogService,
+    { provide: HTTP_INTERCEPTORS, useClass: AuthorizeInterceptor, multi: true },
+  ],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
