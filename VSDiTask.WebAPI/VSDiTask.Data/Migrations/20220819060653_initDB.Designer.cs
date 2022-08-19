@@ -12,7 +12,7 @@ using VSDiTask.Core.Data;
 namespace VSDiTask.Core.Migrations
 {
     [DbContext(typeof(VSDiTaskDBContext))]
-    [Migration("20220815131907_initDB")]
+    [Migration("20220819060653_initDB")]
     partial class initDB
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

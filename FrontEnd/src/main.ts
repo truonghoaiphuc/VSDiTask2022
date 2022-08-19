@@ -10,6 +10,7 @@ if (environment.production) {
 
 export function getBaseUrl() {
   return document.getElementsByTagName('base')[0].href;
+  //return environment.BASE_API;
 }
 
 const providers = [
@@ -20,6 +21,10 @@ const providers = [
   },
 ];
 
-platformBrowserDynamic()
+if (environment.production) {
+  enableProdMode();
+}
+
+platformBrowserDynamic(providers)
   .bootstrapModule(AppModule)
   .catch((err) => console.error(err));

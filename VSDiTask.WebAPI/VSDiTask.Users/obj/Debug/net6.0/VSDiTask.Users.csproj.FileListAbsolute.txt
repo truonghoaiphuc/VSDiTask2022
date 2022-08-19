@@ -2,8 +2,6 @@ E:\Code\VSDiTasks\VSDiTask.WebAPI\VSDiTask.Users\bin\Debug\net6.0\VSDiTask.Users
 E:\Code\VSDiTasks\VSDiTask.WebAPI\VSDiTask.Users\bin\Debug\net6.0\VSDiTask.Users.dll
 E:\Code\VSDiTasks\VSDiTask.WebAPI\VSDiTask.Users\bin\Debug\net6.0\VSDiTask.Users.pdb
 E:\Code\VSDiTasks\VSDiTask.WebAPI\VSDiTask.Users\bin\Debug\net6.0\VSDiTask.Core.dll
-E:\Code\VSDiTasks\VSDiTask.WebAPI\VSDiTask.Users\bin\Debug\net6.0\VSDiTask.Infrastructure.dll
-E:\Code\VSDiTasks\VSDiTask.WebAPI\VSDiTask.Users\bin\Debug\net6.0\VSDiTask.Infrastructure.pdb
 E:\Code\VSDiTasks\VSDiTask.WebAPI\VSDiTask.Users\bin\Debug\net6.0\VSDiTask.Core.pdb
 E:\Code\VSDiTasks\VSDiTask.WebAPI\VSDiTask.Users\obj\Debug\net6.0\VSDiTask.Users.csproj.AssemblyReference.cache
 E:\Code\VSDiTasks\VSDiTask.WebAPI\VSDiTask.Users\obj\Debug\net6.0\VSDiTask.Users.GeneratedMSBuildEditorConfig.editorconfig
@@ -32,3 +30,5 @@ E:\Coding\VSDiTask\VSDiTask.WebAPI\VSDiTask.Users\obj\Debug\net6.0\VSDiTask.User
 E:\Coding\VSDiTask\VSDiTask.WebAPI\VSDiTask.Users\obj\Debug\net6.0\refint\VSDiTask.Users.dll
 E:\Coding\VSDiTask\VSDiTask.WebAPI\VSDiTask.Users\obj\Debug\net6.0\VSDiTask.Users.pdb
 E:\Coding\VSDiTask\VSDiTask.WebAPI\VSDiTask.Users\obj\Debug\net6.0\ref\VSDiTask.Users.dll
+E:\Code\VSDiTasks\VSDiTask.WebAPI\VSDiTask.Users\bin\Debug\net6.0\VSDiTask.Common.Extensions.dll
+E:\Code\VSDiTasks\VSDiTask.WebAPI\VSDiTask.Users\bin\Debug\net6.0\VSDiTask.Common.Extensions.pdb

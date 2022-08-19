@@ -20,16 +20,17 @@ namespace VSDiTask.Users.Services
             _dbContextFactory = dbContextFactory;
         }
 
-        public Task<UserToken> GetUserTokenInfoAsync(string username)
+        public async Task<UserToken> GetUserTokenInfoAsync(string username)
         {
             using var context = _dbContextFactory.CreateDbContext();
-            return context.AppUsers
+            return await context.AppUsers
                 .Where(x => x.UserName == username)
                 .Select(x => new UserToken
                 {
                     UserName = x.UserName,
                     FirstName = x.FirstName,
                     LastName = x.LastName,
+                    Role = "User"
                 })
                 .FirstOrDefaultAsync();
         }

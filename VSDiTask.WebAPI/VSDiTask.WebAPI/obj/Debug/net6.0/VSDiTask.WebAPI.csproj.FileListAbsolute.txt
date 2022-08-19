@@ -59,9 +59,7 @@ E:\Code\VSDiTasks\VSDiTask.WebAPI\VSDiTask.WebAPI\obj\Debug\net6.0\VSDiTask.WebA
 E:\Code\VSDiTasks\VSDiTask.WebAPI\VSDiTask.WebAPI\obj\Debug\net6.0\ref\VSDiTask.WebAPI.dll
 E:\Code\VSDiTasks\VSDiTask.WebAPI\VSDiTask.WebAPI\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 E:\Code\VSDiTasks\VSDiTask.WebAPI\VSDiTask.WebAPI\bin\Debug\net6.0\VSDiTask.Core.dll
-E:\Code\VSDiTasks\VSDiTask.WebAPI\VSDiTask.WebAPI\bin\Debug\net6.0\VSDiTask.Infrastructure.dll
 E:\Code\VSDiTasks\VSDiTask.WebAPI\VSDiTask.WebAPI\bin\Debug\net6.0\VSDiTask.Users.dll
-E:\Code\VSDiTasks\VSDiTask.WebAPI\VSDiTask.WebAPI\bin\Debug\net6.0\VSDiTask.Infrastructure.pdb
 E:\Code\VSDiTasks\VSDiTask.WebAPI\VSDiTask.WebAPI\bin\Debug\net6.0\VSDiTask.Users.pdb
 E:\Code\VSDiTasks\VSDiTask.WebAPI\VSDiTask.WebAPI\bin\Debug\net6.0\VSDiTask.Core.pdb
 E:\Code\VSDiTasks\VSDiTask.WebAPI\VSDiTask.WebAPI\bin\Debug\net6.0\Humanizer.dll
@@ -134,3 +132,10 @@ E:\Coding\VSDiTask\VSDiTask.WebAPI\VSDiTask.WebAPI\obj\Debug\net6.0\refint\VSDiT
 E:\Coding\VSDiTask\VSDiTask.WebAPI\VSDiTask.WebAPI\obj\Debug\net6.0\VSDiTask.WebAPI.pdb
 E:\Coding\VSDiTask\VSDiTask.WebAPI\VSDiTask.WebAPI\obj\Debug\net6.0\VSDiTask.WebAPI.genruntimeconfig.cache
 E:\Coding\VSDiTask\VSDiTask.WebAPI\VSDiTask.WebAPI\obj\Debug\net6.0\ref\VSDiTask.WebAPI.dll
+E:\Code\VSDiTasks\VSDiTask.WebAPI\VSDiTask.WebAPI\bin\Debug\net6.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+E:\Code\VSDiTasks\VSDiTask.WebAPI\VSDiTask.WebAPI\bin\Debug\net6.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+E:\Code\VSDiTasks\VSDiTask.WebAPI\VSDiTask.WebAPI\bin\Debug\net6.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+E:\Code\VSDiTasks\VSDiTask.WebAPI\VSDiTask.WebAPI\bin\Debug\net6.0\Microsoft.Extensions.Identity.Core.dll
+E:\Code\VSDiTasks\VSDiTask.WebAPI\VSDiTask.WebAPI\bin\Debug\net6.0\Microsoft.Extensions.Identity.Stores.dll
+E:\Code\VSDiTasks\VSDiTask.WebAPI\VSDiTask.WebAPI\bin\Debug\net6.0\VSDiTask.Common.Extensions.dll
+E:\Code\VSDiTasks\VSDiTask.WebAPI\VSDiTask.WebAPI\bin\Debug\net6.0\VSDiTask.Common.Extensions.pdb

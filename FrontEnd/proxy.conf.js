@@ -4,16 +4,16 @@ const target = env.ASPNETCORE_HTTPS_PORT
   ? `https://localhost:${env.ASPNETCORE_HTTPS_PORT}`
   : env.ASPNETCORE_HTTPS_URLS
   ? env.ASPNETCORE_HTTPS_URLS.split(";")[0]
-  : "https://localhost:7217";
+  : "https://localhost:7218";
 
 console.log("> proxy target: " + target);
 
-const PROCY_CONFIG = [
+const PROXY_CONFIG = [
   {
     context: ["/api"],
-    target: "https://localhost:7217",
+    target: target,
     secure: false,
   },
 ];
 
-module.exports = PROCY_CONFIG;
+module.exports = PROXY_CONFIG;

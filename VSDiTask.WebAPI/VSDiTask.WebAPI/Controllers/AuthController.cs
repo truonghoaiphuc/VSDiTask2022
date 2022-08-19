@@ -23,10 +23,10 @@ namespace VSDiTask.WebAPI.Controllers
         [AllowAnonymous]
         public async Task<IActionResult> Login(UserLogin user)
         {
-            if (ModelState.IsValid)
-            {
-                return BadRequest();
-            }
+            //if (ModelState.IsValid)
+            //{
+            //    return BadRequest();
+            //}
 
             var valid = await _userService.IsValidUserAccountAsync(user);
 

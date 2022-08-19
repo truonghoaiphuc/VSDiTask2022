@@ -8,6 +8,7 @@ import { MatCardModule } from '@angular/material/card';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { HttpClientModule } from '@angular/common/http';
+import { MatInputModule } from '@angular/material/input';
 
 @NgModule({
   declarations: [UnauthorizedComponent, LoginComponent],
@@ -15,6 +16,7 @@ import { HttpClientModule } from '@angular/common/http';
     CommonModule,
     MatCardModule,
     MatFormFieldModule,
+    MatInputModule,
     ReactiveFormsModule,
     UnauthorizedRoutingModule,
     HttpClientModule,

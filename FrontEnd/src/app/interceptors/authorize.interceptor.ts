@@ -35,10 +35,11 @@ export class AuthorizeInterceptor implements HttpInterceptor {
     next: HttpHandler
   ) {
     req = req.clone({
-      url:
-        stringHelper.trimEnding(this._baseUrl, '/') +
-        stringHelper.trimLeading(req.url, '/'),
+      url: this._baseUrl + req.url,
+      //stringHelper.trimEnding(this._baseUrl, '/') +
+      //stringHelper.trimLeading(req.url, '/'),
     });
+
     if (!!token && token.length > 0) {
       req = req.clone({
         setHeaders: {
@@ -46,7 +47,7 @@ export class AuthorizeInterceptor implements HttpInterceptor {
         },
       });
     }
-
+    console.log(req);
     return next.handle(req).pipe(catchError(this.handleError));
   }
 
@@ -58,7 +59,6 @@ export class AuthorizeInterceptor implements HttpInterceptor {
       this._authService.clearToken();
     }
     //todo
-
     return throwError({
       success: false,
       statusCode: 'internal_server_error',

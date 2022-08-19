@@ -4,17 +4,12 @@ import { AuthenService } from 'src/app/Services/authen.service';
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
-  styleUrls: ['./navbar.component.css']
+  styleUrls: ['./navbar.component.css'],
 })
 export class NavbarComponent implements OnInit {
-
   isLoggedIn: boolean = false;
 
-  constructor(private authenService : AuthenService) { }
+  constructor(private authenService: AuthenService) {}
 
-  ngOnInit(): void {
-    this.isLoggedIn = this.authenService.isUserAuthenticated();
-    console.log(this.isLoggedIn);
-  }
-
+  ngOnInit(): void {}
 }
