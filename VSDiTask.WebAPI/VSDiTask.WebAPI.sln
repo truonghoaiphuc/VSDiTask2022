@@ -13,9 +13,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VSDiTask.Services", "VSDiTa
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Business", "Business", "{EAEF6D25-C8CC-4935-BF7A-1A5DAB3613A3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VSDiTask.Infrastructure", "VSDiTask.Infrastructure\VSDiTask.Infrastructure.csproj", "{4AF9E507-1EB7-4EAD-9BD3-C56AACE98443}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VSDiTask.Infrastructure", "VSDiTask.Infrastructure\VSDiTask.Infrastructure.csproj", "{4AF9E507-1EB7-4EAD-9BD3-C56AACE98443}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VSDiTask.Users", "VSDiTask.Users\VSDiTask.Users.csproj", "{0CFC5CEB-DC5B-499C-A430-0B34B5AA8713}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VSDiTask.Users", "VSDiTask.Users\VSDiTask.Users.csproj", "{0CFC5CEB-DC5B-499C-A430-0B34B5AA8713}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VSDiTask.Companies", "VSDiTask.Companies\VSDiTask.Companies.csproj", "{DC7FC523-1EBF-42B5-9315-A7900D0BF078}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -47,6 +49,10 @@ Global
 		{0CFC5CEB-DC5B-499C-A430-0B34B5AA8713}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0CFC5CEB-DC5B-499C-A430-0B34B5AA8713}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0CFC5CEB-DC5B-499C-A430-0B34B5AA8713}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DC7FC523-1EBF-42B5-9315-A7900D0BF078}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC7FC523-1EBF-42B5-9315-A7900D0BF078}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC7FC523-1EBF-42B5-9315-A7900D0BF078}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC7FC523-1EBF-42B5-9315-A7900D0BF078}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -54,6 +60,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{1471EB96-21A9-4151-90D6-1E04D16D992F} = {EAEF6D25-C8CC-4935-BF7A-1A5DAB3613A3}
 		{0CFC5CEB-DC5B-499C-A430-0B34B5AA8713} = {EAEF6D25-C8CC-4935-BF7A-1A5DAB3613A3}
+		{DC7FC523-1EBF-42B5-9315-A7900D0BF078} = {EAEF6D25-C8CC-4935-BF7A-1A5DAB3613A3}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {392B9BB6-79A5-4A29-A372-3E8BADD1B43B}

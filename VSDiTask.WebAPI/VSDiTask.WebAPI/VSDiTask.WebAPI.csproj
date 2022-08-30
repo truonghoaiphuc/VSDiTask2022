@@ -2,6 +2,9 @@
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
+    <IsPackable>false</IsPackable>
+    <SpaProxyServerUrl>https://localhost:8200</SpaProxyServerUrl>
+    <SpaProxyLaunchCommand>yarn start</SpaProxyLaunchCommand>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>

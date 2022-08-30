@@ -1,0 +1,12 @@
+E:\Code\VSDiTasks\VSDiTask.WebAPI\VSDiTask.Companies\bin\Debug\net6.0\VSDiTask.Companies.deps.json
+E:\Code\VSDiTasks\VSDiTask.WebAPI\VSDiTask.Companies\bin\Debug\net6.0\VSDiTask.Companies.dll
+E:\Code\VSDiTasks\VSDiTask.WebAPI\VSDiTask.Companies\bin\Debug\net6.0\VSDiTask.Companies.pdb
+E:\Code\VSDiTasks\VSDiTask.WebAPI\VSDiTask.Companies\obj\Debug\net6.0\VSDiTask.Companies.csproj.AssemblyReference.cache
+E:\Code\VSDiTasks\VSDiTask.WebAPI\VSDiTask.Companies\obj\Debug\net6.0\VSDiTask.Companies.GeneratedMSBuildEditorConfig.editorconfig
+E:\Code\VSDiTasks\VSDiTask.WebAPI\VSDiTask.Companies\obj\Debug\net6.0\VSDiTask.Companies.AssemblyInfoInputs.cache
+E:\Code\VSDiTasks\VSDiTask.WebAPI\VSDiTask.Companies\obj\Debug\net6.0\VSDiTask.Companies.AssemblyInfo.cs
+E:\Code\VSDiTasks\VSDiTask.WebAPI\VSDiTask.Companies\obj\Debug\net6.0\VSDiTask.Companies.csproj.CoreCompileInputs.cache
+E:\Code\VSDiTasks\VSDiTask.WebAPI\VSDiTask.Companies\obj\Debug\net6.0\VSDiTask.Companies.dll
+E:\Code\VSDiTasks\VSDiTask.WebAPI\VSDiTask.Companies\obj\Debug\net6.0\refint\VSDiTask.Companies.dll
+E:\Code\VSDiTasks\VSDiTask.WebAPI\VSDiTask.Companies\obj\Debug\net6.0\VSDiTask.Companies.pdb
+E:\Code\VSDiTasks\VSDiTask.WebAPI\VSDiTask.Companies\obj\Debug\net6.0\ref\VSDiTask.Companies.dll

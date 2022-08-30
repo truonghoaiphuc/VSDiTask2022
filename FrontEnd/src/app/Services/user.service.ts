@@ -10,7 +10,7 @@ export class UserService {
 
   public login(usercred: any): Observable<string> {
     return this._http
-      .post<any>(`api/auth/login`, usercred)
+      .post<any>(`/api/auth/login`, usercred)
       .pipe(map((response) => response.token));
   }
 }

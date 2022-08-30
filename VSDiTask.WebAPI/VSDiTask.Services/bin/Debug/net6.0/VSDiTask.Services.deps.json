@@ -8,7 +8,10 @@
     ".NETCoreApp,Version=v6.0": {
       "VSDiTask.Services/1.0.0": {
         "dependencies": {
-          "VSDiTask.Infrastructure": "1.0.0"
+          "Light.GuardClauses": "10.0.0",
+          "VSDiTask.Core": "1.0.0",
+          "VSDiTask.Infrastructure": "1.0.0",
+          "VSDiTask.Users": "1.0.0"
         },
         "runtime": {
           "VSDiTask.Services.dll": {}
@@ -19,6 +22,17 @@
           "lib/netstandard2.0/Humanizer.dll": {
             "assemblyVersion": "2.8.0.0",
             "fileVersion": "2.8.26.1919"
+          }
+        }
+      },
+      "Light.GuardClauses/10.0.0": {
+        "dependencies": {
+          "System.Runtime.CompilerServices.Unsafe": "6.0.0"
+        },
+        "runtime": {
+          "lib/netstandard2.1/Light.GuardClauses.dll": {
+            "assemblyVersion": "10.0.0.0",
+            "fileVersion": "10.0.0.0"
           }
         }
       },
@@ -481,6 +495,11 @@
           }
         }
       },
+      "VSDiTask.Common.Extensions/1.0.0": {
+        "runtime": {
+          "VSDiTask.Common.Extensions.dll": {}
+        }
+      },
       "VSDiTask.Core/1.0.0": {
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "6.0.8",
@@ -502,6 +521,15 @@
         "runtime": {
           "VSDiTask.Infrastructure.dll": {}
         }
+      },
+      "VSDiTask.Users/1.0.0": {
+        "dependencies": {
+          "VSDiTask.Common.Extensions": "1.0.0",
+          "VSDiTask.Core": "1.0.0"
+        },
+        "runtime": {
+          "VSDiTask.Users.dll": {}
+        }
       }
     }
   },
@@ -517,6 +545,13 @@
       "sha512": "sha512-OiKusGL20vby4uDEswj2IgkdchC1yQ6rwbIkZDVBPIR6al2b7n3pC91elBul9q33KaBgRKhbZH3+2Ur4fnWx2A==",
       "path": "humanizer.core/2.8.26",
       "hashPath": "humanizer.core.2.8.26.nupkg.sha512"
+    },
+    "Light.GuardClauses/10.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-XvZFSSbwkp9rrRvHQtNigG0UCD2xMd6+Zdy2JOu2cGDqprhNDHmXBIYXTFbKdjPIz+2tIhulpDIWu1ck7FIU2g==",
+      "path": "light.guardclauses/10.0.0",
+      "hashPath": "light.guardclauses.10.0.0.nupkg.sha512"
     },
     "Microsoft.CSharp/4.5.0": {
       "type": "package",
@@ -812,12 +847,22 @@
       "path": "system.windows.extensions/4.7.0",
       "hashPath": "system.windows.extensions.4.7.0.nupkg.sha512"
     },
+    "VSDiTask.Common.Extensions/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
     "VSDiTask.Core/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
     },
     "VSDiTask.Infrastructure/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "VSDiTask.Users/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

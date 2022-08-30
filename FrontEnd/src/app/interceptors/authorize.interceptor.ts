@@ -35,9 +35,10 @@ export class AuthorizeInterceptor implements HttpInterceptor {
     next: HttpHandler
   ) {
     req = req.clone({
-      url: this._baseUrl + req.url,
-      //stringHelper.trimEnding(this._baseUrl, '/') +
-      //stringHelper.trimLeading(req.url, '/'),
+      url:
+        stringHelper.trimEnding(this._baseUrl, '/') +
+        '/' +
+        stringHelper.trimLeading(req.url, '/'),
     });
 
     if (!!token && token.length > 0) {

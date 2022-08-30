@@ -32,3 +32,7 @@ E:\Coding\VSDiTask\VSDiTask.WebAPI\VSDiTask.Services\obj\Debug\net6.0\VSDiTask.S
 E:\Coding\VSDiTask\VSDiTask.WebAPI\VSDiTask.Services\obj\Debug\net6.0\refint\VSDiTask.Services.dll
 E:\Coding\VSDiTask\VSDiTask.WebAPI\VSDiTask.Services\obj\Debug\net6.0\VSDiTask.Services.pdb
 E:\Coding\VSDiTask\VSDiTask.WebAPI\VSDiTask.Services\obj\Debug\net6.0\ref\VSDiTask.Services.dll
+E:\Code\VSDiTasks\VSDiTask.WebAPI\VSDiTask.Services\bin\Debug\net6.0\VSDiTask.Common.Extensions.dll
+E:\Code\VSDiTasks\VSDiTask.WebAPI\VSDiTask.Services\bin\Debug\net6.0\VSDiTask.Users.dll
+E:\Code\VSDiTasks\VSDiTask.WebAPI\VSDiTask.Services\bin\Debug\net6.0\VSDiTask.Users.pdb
+E:\Code\VSDiTasks\VSDiTask.WebAPI\VSDiTask.Services\bin\Debug\net6.0\VSDiTask.Common.Extensions.pdb

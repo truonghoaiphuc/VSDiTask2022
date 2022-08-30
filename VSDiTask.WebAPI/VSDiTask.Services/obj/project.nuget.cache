@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "aZxjjnGgMGJCZYNQOIwK6f0xm+PGNkG6SiMp00C4otz54wIPhpWUsc/lJvgzMed70wxoiWVvQoGZeXU2HCrvkg==",
+  "dgSpecHash": "kVq0xDNPaz2dTGUmUXLH6Jr4GE8VV7IEyf1yzBiW6DKLVw+xrOdDbOT2y3RTjU4fEIDMo1Y4pCWtumly678GZw==",
   "success": true,
   "projectFilePath": "E:\\Code\\VSDiTasks\\VSDiTask.WebAPI\\VSDiTask.Services\\VSDiTask.Services.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\truon\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
+    "C:\\Users\\truon\\.nuget\\packages\\light.guardclauses\\10.0.0\\light.guardclauses.10.0.0.nupkg.sha512",
     "C:\\Users\\truon\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\truon\\.nuget\\packages\\microsoft.data.sqlclient\\2.1.4\\microsoft.data.sqlclient.2.1.4.nupkg.sha512",
     "C:\\Users\\truon\\.nuget\\packages\\microsoft.data.sqlclient.sni.runtime\\2.1.1\\microsoft.data.sqlclient.sni.runtime.2.1.1.nupkg.sha512",

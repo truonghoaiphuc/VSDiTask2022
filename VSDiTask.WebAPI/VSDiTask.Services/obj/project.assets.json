@@ -15,6 +15,22 @@
           }
         }
       },
+      "Light.GuardClauses/10.0.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Runtime.CompilerServices.Unsafe": "6.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.1/Light.GuardClauses.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.1/Light.GuardClauses.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.CSharp/4.5.0": {
         "type": "package",
         "compile": {
@@ -783,6 +799,16 @@
           }
         }
       },
+      "VSDiTask.Common.Extensions/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/VSDiTask.Common.Extensions.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/VSDiTask.Common.Extensions.dll": {}
+        }
+      },
       "VSDiTask.Core/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
@@ -814,6 +840,20 @@
         "runtime": {
           "bin/placeholder/VSDiTask.Infrastructure.dll": {}
         }
+      },
+      "VSDiTask.Users/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "VSDiTask.Common.Extensions": "1.0.0",
+          "VSDiTask.Core": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/VSDiTask.Users.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/VSDiTask.Users.dll": {}
+        }
       }
     }
   },
@@ -832,6 +872,22 @@
         "lib/netstandard2.0/Humanizer.dll",
         "lib/netstandard2.0/Humanizer.xml",
         "logo.png"
+      ]
+    },
+    "Light.GuardClauses/10.0.0": {
+      "sha512": "XvZFSSbwkp9rrRvHQtNigG0UCD2xMd6+Zdy2JOu2cGDqprhNDHmXBIYXTFbKdjPIz+2tIhulpDIWu1ck7FIU2g==",
+      "type": "package",
+      "path": "light.guardclauses/10.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/Light.GuardClauses.dll",
+        "lib/netstandard2.0/Light.GuardClauses.xml",
+        "lib/netstandard2.1/Light.GuardClauses.dll",
+        "lib/netstandard2.1/Light.GuardClauses.xml",
+        "light-logo.png",
+        "light.guardclauses.10.0.0.nupkg.sha512",
+        "light.guardclauses.nuspec"
       ]
     },
     "Microsoft.CSharp/4.5.0": {
@@ -2036,6 +2092,11 @@
         "version.txt"
       ]
     },
+    "VSDiTask.Common.Extensions/1.0.0": {
+      "type": "project",
+      "path": "../VSdiTask.Common.Extensions/VSDiTask.Common.Extensions.csproj",
+      "msbuildProject": "../VSdiTask.Common.Extensions/VSDiTask.Common.Extensions.csproj"
+    },
     "VSDiTask.Core/1.0.0": {
       "type": "project",
       "path": "../VSDiTask.Data/VSDiTask.Core.csproj",
@@ -2045,11 +2106,19 @@
       "type": "project",
       "path": "../VSDiTask.Infrastructure/VSDiTask.Infrastructure.csproj",
       "msbuildProject": "../VSDiTask.Infrastructure/VSDiTask.Infrastructure.csproj"
+    },
+    "VSDiTask.Users/1.0.0": {
+      "type": "project",
+      "path": "../VSDiTask.Users/VSDiTask.Users.csproj",
+      "msbuildProject": "../VSDiTask.Users/VSDiTask.Users.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
-      "VSDiTask.Infrastructure >= 1.0.0"
+      "Light.GuardClauses >= 10.0.0",
+      "VSDiTask.Core >= 1.0.0",
+      "VSDiTask.Infrastructure >= 1.0.0",
+      "VSDiTask.Users >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -2079,8 +2148,14 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
+            "E:\\Code\\VSDiTasks\\VSDiTask.WebAPI\\VSDiTask.Data\\VSDiTask.Core.csproj": {
+              "projectPath": "E:\\Code\\VSDiTasks\\VSDiTask.WebAPI\\VSDiTask.Data\\VSDiTask.Core.csproj"
+            },
             "E:\\Code\\VSDiTasks\\VSDiTask.WebAPI\\VSDiTask.Infrastructure\\VSDiTask.Infrastructure.csproj": {
               "projectPath": "E:\\Code\\VSDiTasks\\VSDiTask.WebAPI\\VSDiTask.Infrastructure\\VSDiTask.Infrastructure.csproj"
+            },
+            "E:\\Code\\VSDiTasks\\VSDiTask.WebAPI\\VSDiTask.Users\\VSDiTask.Users.csproj": {
+              "projectPath": "E:\\Code\\VSDiTasks\\VSDiTask.WebAPI\\VSDiTask.Users\\VSDiTask.Users.csproj"
             }
           }
         }
@@ -2094,6 +2169,12 @@
     "frameworks": {
       "net6.0": {
         "targetAlias": "net6.0",
+        "dependencies": {
+          "Light.GuardClauses": {
+            "target": "Package",
+            "version": "[10.0.0, )"
+          }
+        },
         "imports": [
           "net461",
           "net462",
