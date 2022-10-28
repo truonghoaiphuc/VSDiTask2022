@@ -8,6 +8,8 @@ import {
 import { AuthenService } from 'src/app/Services/authen.service';
 import { UserService } from 'src/app/Services/user.service';
 import { tap } from 'rxjs';
+import { Router } from '@angular/router';
+import { DashboardModule } from 'src/app/pages/dashboard/dashboard.module';
 
 @Component({
   selector: 'app-login',
@@ -20,6 +22,7 @@ export class LoginComponent implements OnInit {
   constructor(
     private _userService: UserService,
     private _authService: AuthenService,
+    private _router: Router,
     private formBuilder: FormBuilder
   ) {}
 
@@ -41,6 +44,7 @@ export class LoginComponent implements OnInit {
         next: (token) => {
           if (token?.length) {
             this._authService.persistToken(token);
+            this._router.navigateByUrl('dashboard');
           }
         },
       });

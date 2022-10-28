@@ -10,7 +10,6 @@ import {
   tap,
   map,
 } from 'rxjs';
-import { environment } from 'src/environments/environment';
 import { SystemConstants } from '../commons/constants/system.constants';
 import { LoggedInUser } from '../Models/LoggedInUser';
 import { StorageService } from './storage.service';
@@ -26,15 +25,15 @@ export class AuthenService {
   private _userSubject = new BehaviorSubject<CurrentUser | null>(null);
 
   persistToken(token: string) {
-    this._storage.set(SystemConstants.CURRENT_USER, token);
+    this._storage.set('token', token);
   }
 
   getToken(): Observable<string | null> {
-    return of(this._storage.get(SystemConstants.CURRENT_USER) || '');
+    return of(this._storage.get('token') || '');
   }
 
   clearToken() {
-    this._storage.set(SystemConstants.CURRENT_USER, null);
+    this._storage.set('token', null);
   }
 
   logout(): void {
@@ -60,7 +59,7 @@ export class AuthenService {
   }
 
   getCurrentUser(): Observable<CurrentUser | null> {
-    const token = this._storage.get(SystemConstants.CURRENT_USER);
+    const token = this._storage.get('token');
     if (!token) {
       return of(null);
     }
@@ -96,7 +95,7 @@ export class AuthenService {
   getLoggedInUser(): LoggedInUser {
     let user!: LoggedInUser;
     if (this.isUserAuthenticated()) {
-      var usdata = localStorage.getItem(SystemConstants.CURRENT_USER);
+      var usdata = localStorage.getItem('token');
       if (usdata != null) {
         var userData = JSON.parse(usdata);
         user = new LoggedInUser(

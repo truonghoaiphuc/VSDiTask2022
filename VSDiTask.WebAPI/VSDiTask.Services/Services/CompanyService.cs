@@ -8,7 +8,7 @@ namespace VSDiTask.Services.Services
 {
     public interface ICompanyService
     {
-        Task<AddCompany.Response> AddProductAsync(AddCompany.Request company);
+        Task<AddCompany.Response> AddCompanyAsync(AddCompany.Request company);
     }
     public class CompanyService : ICompanyService
     {
@@ -19,7 +19,7 @@ namespace VSDiTask.Services.Services
 
         }
 
-        public async Task<AddCompany.Response> AddProductAsync(AddCompany.Request company)
+        public async Task<AddCompany.Response> AddCompanyAsync(AddCompany.Request company)
         {
             company.MustNotBeNull();
             company.CompanyCode.MustNotBeNullOrWhiteSpace();

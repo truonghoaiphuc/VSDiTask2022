@@ -50,6 +50,9 @@ import { FileUploadModule } from 'primeng/fileupload';
 import { LoginComponent } from './Components/login/login.component';
 import { AuthorizedComponent } from './layout/authorized/authorized.component';
 import { AuthorizeInterceptor } from './interceptors/authorize.interceptor';
+import { DashboardComponent } from './layout/authorized/dashboard/dashboard.component';
+import { SpinnerComponent } from './shared/spinner/spinner.component';
+import { UserComponent } from './layout/authorized/user/user.component';
 
 @NgModule({
   declarations: [
@@ -65,6 +68,9 @@ import { AuthorizeInterceptor } from './interceptors/authorize.interceptor';
     UserDetailComponent,
     LoginComponent,
     AuthorizedComponent,
+    DashboardComponent,
+    SpinnerComponent,
+    UserComponent,
   ],
   imports: [
     BrowserModule,

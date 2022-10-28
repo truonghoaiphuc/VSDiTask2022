@@ -1,5 +1,5 @@
 <mat-card>
-  <mat-card-title>Login</mat-card-title>
+  <mat-card-title>Đăng nhập hệ thống</mat-card-title>
   <mat-card-content>
     <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
       <div class="example-container">
@@ -37,14 +37,16 @@
             </mat-error>
           </mat-form-field>
         </div>
-        <!-- <div class="mt-top">
-      <button [disabled]="!loginForm.valid" mat-raised-button color="primary" mat-button>Sign In</button>
-    </div> -->
       </div>
 
-      <div class="button">
-        <button type="submit" mat-button>Login</button>
-      </div>
+      <button
+        [disabled]="!loginForm.valid"
+        mat-raised-button
+        type="submit"
+        color="primary"
+      >
+        Đăng nhập
+      </button>
     </form>
   </mat-card-content>
 </mat-card>
