@@ -16,7 +16,7 @@
   transition: 0.5s;
 }
 .card:hover {
-  height: 350px;
+  height: 400px;
 }
 .imgBox {
   position: absolute;
@@ -32,8 +32,8 @@
   transition: 0.5s;
 }
 .card:hover .imgBox {
-  height: 150px;
-  width: 150px;
+  height: 200px;
+  width: 200px;
 }
 .imgBox img {
   position: absolute;
