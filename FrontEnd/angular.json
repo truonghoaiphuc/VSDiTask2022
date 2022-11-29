@@ -35,7 +35,8 @@
               "node_modules/bootstrap/dist/css/bootstrap.css",
               "node_modules/primeflex/primeflex.css",
               "node_modules/ngx-toastr/toastr.css",
-              "src/styles.css"
+              "src/styles.css",
+              "src/assets/styles/style.scss"
             ],
             "scripts": ["node_modules/bootstrap/dist/js/bootstrap.bundle.js"]
           },
@@ -82,8 +83,7 @@
               "browserTarget": "VSDiTasks:build:development",
               "proxyConfig": "proxy.conf.js"
             }
-          },
-          "defaultConfiguration": "development"
+          }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
@@ -91,6 +91,7 @@
             "browserTarget": "VSDiTasks:build"
           }
         },
+
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {

@@ -4,15 +4,16 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NavbarComponent } from './commons/navbar/navbar.component';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatBadgeModule } from '@angular/material/badge';
 import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
+import { MatMenuModule } from '@angular/material/menu';
 import { MatButtonModule } from '@angular/material/button';
 import { DragDropModule } from '@angular/cdk/drag-drop';
 import { MatDialogModule } from '@angular/material/dialog';
@@ -21,6 +22,7 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatTableModule } from '@angular/material/table';
+import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import { CompanyListComponent } from './Components/Company/company-list/company-list.component';
@@ -50,14 +52,14 @@ import { FileUploadModule } from 'primeng/fileupload';
 import { LoginComponent } from './Components/login/login.component';
 import { AuthorizedComponent } from './layout/authorized/authorized.component';
 import { AuthorizeInterceptor } from './interceptors/authorize.interceptor';
-import { DashboardComponent } from './layout/authorized/dashboard/dashboard.component';
 import { SpinnerComponent } from './shared/spinner/spinner.component';
-import { UserComponent } from './layout/authorized/user/user.component';
+import { AppHeaderComponent } from './layout/header/header.component';
+import { AppSidebarComponent } from './layout/sidebar/sidebar.component';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavbarComponent,
     CompanyListComponent,
     CompanyDetailComponent,
     DepartmentListComponent,
@@ -68,9 +70,9 @@ import { UserComponent } from './layout/authorized/user/user.component';
     UserDetailComponent,
     LoginComponent,
     AuthorizedComponent,
-    DashboardComponent,
     SpinnerComponent,
-    UserComponent,
+    AppHeaderComponent,
+    AppSidebarComponent,
   ],
   imports: [
     BrowserModule,
@@ -81,9 +83,11 @@ import { UserComponent } from './layout/authorized/user/user.component';
     BrowserAnimationsModule,
     MatToolbarModule,
     MatCardModule,
+    MatBadgeModule,
     MatFormFieldModule,
     MatInputModule,
     MatIconModule,
+    MatSidenavModule,
     MatButtonModule,
     DragDropModule,
     MatDialogModule,
@@ -94,6 +98,7 @@ import { UserComponent } from './layout/authorized/user/user.component';
     MatTableModule,
     MatPaginatorModule,
     MatSortModule,
+    MatMenuModule,
     CommonModule,
     ToolbarModule,
     TableModule,
@@ -107,6 +112,7 @@ import { UserComponent } from './layout/authorized/user/user.component';
     CardModule,
     AvatarModule,
     MatProgressSpinnerModule,
+    SharedModule,
     FileUploadModule,
   ],
   providers: [
