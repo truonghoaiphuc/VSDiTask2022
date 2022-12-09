@@ -1,19 +1,11 @@
 ﻿namespace VSDiTask.Core.Entities
 {
-    public class BaseEntity
+    public class ITaskDiscuss : BaseEntity, ICreatedEntity, IUpdateEntity
     {
-        public long Id { get; set; }
-        public string Description { get; set; }
-    }
-
-    public interface ICreatedEntity
-    {
+        public long STaskId { get; set; }
+        public string Content { get; set; }
         public string CreatedId { get; set; }
         public DateTimeOffset CreatedAt { get; set; }
-    }
-
-    public interface IUpdateEntity
-    {
         public string UpdatedId { get; set; }
         public DateTimeOffset UpdatedAt { get; set; }
     }

@@ -1,4 +1,6 @@
-﻿namespace VSDiTask.Core.Entities
+﻿using VSDiTask.Core.Entities.Enums;
+
+namespace VSDiTask.Core.Entities
 {
     public class User : BaseEntity
     {
@@ -12,5 +14,6 @@
         public bool Gender { get; set; }
         public DateTimeOffset Birthday { get; set; }
         public string Avatar { get; set; }
+        public UserStatus Status { get; set; }
     }
 }
