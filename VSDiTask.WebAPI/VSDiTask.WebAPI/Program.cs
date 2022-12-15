@@ -19,6 +19,7 @@ builder.Services
     .AddCoreServices(connectionString, isDevelopment, isDevelopment)
     .AddInternalServices(builder.Configuration)
     .AddUserServices()
+    .AddCompanyServices()
     .AddCors(p => p.AddPolicy("corspolicy", build =>
     {
         build.WithOrigins("*").AllowAnyMethod().AllowAnyHeader();

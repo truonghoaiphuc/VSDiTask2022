@@ -1,9 +1,15 @@
-﻿namespace VSDiTask.Core.Entities
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
+namespace VSDiTask.Core.Entities
 {
-    public class Department : BaseEntity
+    public class Department
     {
+        [Key]
         public string DeptCode { get; set; }
         public string DeptName { get; set; }
-        public Company Branch { get; set; }
+        [ForeignKey("Company")]
+        public string Branch { get; set; }
+        public Company Company { get; set; }
     }
 }

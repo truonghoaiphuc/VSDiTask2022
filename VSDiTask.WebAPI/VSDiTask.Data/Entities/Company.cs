@@ -1,7 +1,10 @@
-﻿namespace VSDiTask.Core.Entities
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace VSDiTask.Core.Entities
 {
-    public class Company : BaseEntity
+    public class Company
     {
+        [Key]
         public string CompCode { get; set; }
         public string CompName { get; set; }
         public string CompAddress { get; set; }

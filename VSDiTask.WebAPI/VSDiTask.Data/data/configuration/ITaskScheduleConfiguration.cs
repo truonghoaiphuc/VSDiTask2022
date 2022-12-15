@@ -10,10 +10,11 @@ namespace VSDiTask.Infrastructure.data.configuration
         {
             builder.ToTable("ITaskSchedules");
 
-            builder.Property(x => x.TaskId)
+            builder.Property(x => x.ITaskId)
                 .IsRequired();
             builder.Property(x => x.UserId)
                 .IsRequired();
+            builder.Property(x => x.CreatedAt).HasDefaultValueSql("getutcdate()");
         }
     }
 }

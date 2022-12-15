@@ -2,11 +2,13 @@
 {
     public class Permission : BaseEntity
     {
-        public Role RoleId { get; set; }
-        public Function FunctionId { get; set; }
-        public bool CanRead { get; set; }
-        public bool CanCreate { get; set; }
-        public bool CanUpdate { get; set; }
-        public bool CanDelete { get; set; }
+        public string RoleId { get; set; }
+        public Role Role { get; set; }
+        public string FunctionId { get; set; }
+        public Function Function { get; set; }
+        public bool CanRead { get; set; } = false;
+        public bool CanCreate { get; set; } = false;
+        public bool CanUpdate { get; set; } = false;
+        public bool CanDelete { get; set; } = false;
     }
 }

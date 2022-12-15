@@ -19,8 +19,7 @@ namespace VSDiTask.Infrastructure.data.configuration
             builder.HasIndex(x => x.DeptCode)
                 .IsUnique();
             builder.Property(x => x.Branch)
-                .IsRequired()
-                .HasMaxLength(200);
+                .IsRequired();
         }
     }
 }

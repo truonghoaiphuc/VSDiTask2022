@@ -9,6 +9,7 @@ namespace VSDiTask.Services.Services
     public interface ICompanyService
     {
         Task<AddCompany.Response> AddCompanyAsync(AddCompany.Request company);
+        Task<List<GetListCompany.Response>> GetListCompanyAsync(GetListCompany.Request request);
     }
     public class CompanyService : ICompanyService
     {
@@ -22,8 +23,8 @@ namespace VSDiTask.Services.Services
         public async Task<AddCompany.Response> AddCompanyAsync(AddCompany.Request company)
         {
             company.MustNotBeNull();
-            company.CompanyCode.MustNotBeNullOrWhiteSpace();
-            company.CompanyName.MustNotBeNullOrEmpty();
+            company.CompCode.MustNotBeNullOrWhiteSpace();
+            company.CompName.MustNotBeNullOrEmpty();
 
             AddCompany.Response FailedResult(StatusCode statuscode)
             {
@@ -34,28 +35,40 @@ namespace VSDiTask.Services.Services
             }
             using var context = _vsdiTaskDbContextFactory.CreateDbContext();
 
-            if (await IsCompanyExist(context, company.CompanyCode))
+            if (await IsCompanyExist(context, company.CompCode))
             {
                 return FailedResult(StatusCode.Company_already_exist);
             }
 
             var entity = context.Companies.Add(new Core.Entities.Company
             {
-                CompanyCode = company.CompanyCode,
-                CompanyName = company.CompanyName,
-                CompanyAddress = company.CompanyAddress
+                CompCode = company.CompCode,
+                CompName = company.CompName,
+                CompAddress = company.CompAddress
             }).Entity;
 
             await context.SaveChangesAsync();
             return new AddCompany.Response
             {
-                Id = entity.Id,
+                Id = entity.CompCode,
             };
         }
 
+        public async Task<List<GetListCompany.Response>> GetListCompanyAsync(GetListCompany.Request request)
+        {
+            using var context = _vsdiTaskDbContextFactory.CreateDbContext();
+            return await context.Companies
+                .Select(x => new GetListCompany.Response
+                {
+                    compCode = x.CompCode,
+                    compName = x.CompName,
+                    compAddress = x.CompAddress
+                })
+                .ToListAsync();
+        }
         private Task<bool> IsCompanyExist(VSDiTaskDBContext context, string code)
         {
-            return context.Companies.Where(x => x.CompanyCode == code)
+            return context.Companies.Where(x => x.CompCode == code)
                 .AnyAsync();
         }
     }
