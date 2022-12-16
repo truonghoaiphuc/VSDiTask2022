@@ -2,13 +2,13 @@
 
 namespace VSDiTask.Services.Models
 {
-    public class AddCompany
+    public class AddDepartment
     {
         public class Request
         {
-            public string? CompCode { get; set; }
-            public string? CompName { get; set; }
-            public string? CompAddress { get; set; }
+            public string? DeptCode { get; set; }
+            public string? DeptName { get; set; }
+            public string? Branch { get; set; }
         }
 
         public class Response

@@ -9,7 +9,10 @@ namespace VSDiTask.Services.Services
     public interface ICompanyService
     {
         Task<AddCompany.Response> AddCompanyAsync(AddCompany.Request company);
+        Task<AddCompany.Response> UpdateCompanyAsync(AddCompany.Request company);
+        Task<AddCompany.Response> DeleteCompanyAsync(AddCompany.Request company);
         Task<List<GetListCompany.Response>> GetListCompanyAsync(GetListCompany.Request request);
+        Task<List<GetListCompany.Response>> GetAllCompanyAsync(GetListCompany.Request request);
     }
     public class CompanyService : ICompanyService
     {
@@ -54,6 +57,55 @@ namespace VSDiTask.Services.Services
             };
         }
 
+        public async Task<AddCompany.Response> DeleteCompanyAsync(AddCompany.Request company)
+        {
+            company.MustNotBeNull();
+            company.CompCode.MustNotBeNullOrWhiteSpace();
+
+            AddCompany.Response FailedResult(StatusCode statuscode)
+            {
+                return new AddCompany.Response
+                {
+                    StatusCode = statuscode,
+                };
+            }
+            using var context = _vsdiTaskDbContextFactory.CreateDbContext();
+
+            var comp = await context.Companies.Where(x => x.CompCode == company.CompCode).FirstOrDefaultAsync();
+            if (comp == null)
+                return FailedResult(StatusCode.Company_not_exist);
+
+            var entity = context.Companies.Remove(comp).Entity;
+
+            await context.SaveChangesAsync();
+            return new AddCompany.Response
+            {
+                Id = entity.CompCode,
+            };
+        }
+
+        public async Task<List<GetListCompany.Response>> GetAllCompanyAsync(GetListCompany.Request request)
+        {
+            using var context = _vsdiTaskDbContextFactory.CreateDbContext();
+            return await context.Companies
+                .Select(x => new GetListCompany.Response
+                {
+                    compCode = x.CompCode,
+                    compName = x.CompName,
+                    compAddress = x.CompAddress,
+                    Depts = context.Departments
+                        .Where(y => y.Branch == x.CompCode)
+                        .Select(c => new GetListDepartment.Response
+                        {
+                            deptCode = c.DeptCode,
+                            deptName = c.DeptName,
+                            branch = c.Branch
+                        })
+                        .ToList()
+                })
+                .ToListAsync();
+        }
+
         public async Task<List<GetListCompany.Response>> GetListCompanyAsync(GetListCompany.Request request)
         {
             using var context = _vsdiTaskDbContextFactory.CreateDbContext();
@@ -66,6 +118,38 @@ namespace VSDiTask.Services.Services
                 })
                 .ToListAsync();
         }
+
+        public async Task<AddCompany.Response> UpdateCompanyAsync(AddCompany.Request company)
+        {
+            company.MustNotBeNull();
+            company.CompCode.MustNotBeNullOrWhiteSpace();
+            company.CompName.MustNotBeNullOrEmpty();
+
+            AddCompany.Response FailedResult(StatusCode statuscode)
+            {
+                return new AddCompany.Response
+                {
+                    StatusCode = statuscode,
+                };
+            }
+            using var context = _vsdiTaskDbContextFactory.CreateDbContext();
+
+            var comp = await context.Companies.Where(x => x.CompCode == company.CompCode).FirstOrDefaultAsync();
+            if (comp == null)
+                return FailedResult(StatusCode.Company_not_exist);
+
+            comp.CompName = company.CompName;
+            comp.CompAddress = company.CompAddress;
+
+            var entity = context.Companies.Update(comp).Entity;
+
+            await context.SaveChangesAsync();
+            return new AddCompany.Response
+            {
+                Id = entity.CompCode,
+            };
+        }
+
         private Task<bool> IsCompanyExist(VSDiTaskDBContext context, string code)
         {
             return context.Companies.Where(x => x.CompCode == code)

@@ -12,15 +12,40 @@ namespace VSDiTask.WebAPI.Controllers
         {
             _companyService = companyService;
         }
-        //public IActionResult AddCompany(Company company)
-        //{
 
-        //}
         [HttpGet]
         public async Task<IActionResult> Companies()
         {
             var companies = await _companyService.GetListCompanyAsync(new VSDiTask.Services.Models.GetListCompany.Request { });
             return Ok(companies);
+        }
+
+        [HttpGet("all")]
+        public async Task<IActionResult> GetAll()
+        {
+            var companies = await _companyService.GetAllCompanyAsync(new VSDiTask.Services.Models.GetListCompany.Request { });
+            return Ok(companies);
+        }
+
+        [HttpPut("update")]
+        public async Task<IActionResult> Update(VSDiTask.Services.Models.AddCompany.Request request)
+        {
+            var comp = await _companyService.UpdateCompanyAsync(request);
+            return Ok(comp);
+        }
+
+        [HttpPost("add")]
+        public async Task<IActionResult> Add(VSDiTask.Services.Models.AddCompany.Request request)
+        {
+            var comp = await _companyService.AddCompanyAsync(request);
+            return Ok(comp);
+        }
+
+        [HttpDelete("delete")]
+        public async Task<IActionResult> Delete(VSDiTask.Services.Models.AddCompany.Request request)
+        {
+            var comp = await _companyService.DeleteCompanyAsync(request);
+            return Ok(comp);
         }
     }
 }
