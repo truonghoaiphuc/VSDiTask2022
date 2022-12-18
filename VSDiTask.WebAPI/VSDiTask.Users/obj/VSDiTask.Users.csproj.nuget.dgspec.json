@@ -1,32 +1,31 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Code\\VSDiTasks\\VSDiTask.WebAPI\\VSDiTask.Users\\VSDiTask.Users.csproj": {}
+    "E:\\Coding\\VSDiTask\\VSDiTask.WebAPI\\VSDiTask.Users\\VSDiTask.Users.csproj": {}
   },
   "projects": {
-    "E:\\Code\\VSDiTasks\\VSDiTask.WebAPI\\VSdiTask.Common.Extensions\\VSDiTask.Common.Extensions.csproj": {
+    "E:\\Coding\\VSDiTask\\VSDiTask.WebAPI\\VSdiTask.Common.Extensions\\VSDiTask.Common.Extensions.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Code\\VSDiTasks\\VSDiTask.WebAPI\\VSdiTask.Common.Extensions\\VSDiTask.Common.Extensions.csproj",
+        "projectUniqueName": "E:\\Coding\\VSDiTask\\VSDiTask.WebAPI\\VSdiTask.Common.Extensions\\VSDiTask.Common.Extensions.csproj",
         "projectName": "VSDiTask.Common.Extensions",
-        "projectPath": "E:\\Code\\VSDiTasks\\VSDiTask.WebAPI\\VSdiTask.Common.Extensions\\VSDiTask.Common.Extensions.csproj",
-        "packagesPath": "C:\\Users\\truon\\.nuget\\packages\\",
-        "outputPath": "E:\\Code\\VSDiTasks\\VSDiTask.WebAPI\\VSdiTask.Common.Extensions\\obj\\",
+        "projectPath": "E:\\Coding\\VSDiTask\\VSDiTask.WebAPI\\VSdiTask.Common.Extensions\\VSDiTask.Common.Extensions.csproj",
+        "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
+        "outputPath": "E:\\Coding\\VSDiTask\\VSDiTask.WebAPI\\VSdiTask.Common.Extensions\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\truon\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net6.0"
+          "net60"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://www.nuget.org/api/v2/curated-feeds/microsoftdotnet/": {}
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net6.0": {
-            "targetAlias": "net6.0",
+          "net60": {
             "projectReferences": {}
           }
         },
@@ -37,51 +36,33 @@
         }
       },
       "frameworks": {
-        "net6.0": {
-          "targetAlias": "net6.0",
-          "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48",
-            "net481"
-          ],
-          "assetTargetFallback": true,
-          "warn": true,
-          "frameworkReferences": {
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            }
-          },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+        "net60": {
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "E:\\Code\\VSDiTasks\\VSDiTask.WebAPI\\VSDiTask.Data\\VSDiTask.Core.csproj": {
+    "E:\\Coding\\VSDiTask\\VSDiTask.WebAPI\\VSDiTask.Data\\VSDiTask.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Code\\VSDiTasks\\VSDiTask.WebAPI\\VSDiTask.Data\\VSDiTask.Core.csproj",
+        "projectUniqueName": "E:\\Coding\\VSDiTask\\VSDiTask.WebAPI\\VSDiTask.Data\\VSDiTask.Core.csproj",
         "projectName": "VSDiTask.Core",
-        "projectPath": "E:\\Code\\VSDiTasks\\VSDiTask.WebAPI\\VSDiTask.Data\\VSDiTask.Core.csproj",
-        "packagesPath": "C:\\Users\\truon\\.nuget\\packages\\",
-        "outputPath": "E:\\Code\\VSDiTasks\\VSDiTask.WebAPI\\VSDiTask.Data\\obj\\",
+        "projectPath": "E:\\Coding\\VSDiTask\\VSDiTask.WebAPI\\VSDiTask.Data\\VSDiTask.Core.csproj",
+        "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
+        "outputPath": "E:\\Coding\\VSDiTask\\VSDiTask.WebAPI\\VSDiTask.Data\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\truon\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net6.0"
+          "net60"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://www.nuget.org/api/v2/curated-feeds/microsoftdotnet/": {}
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net6.0": {
-            "targetAlias": "net6.0",
+          "net60": {
             "projectReferences": {}
           }
         },
@@ -92,8 +73,7 @@
         }
       },
       "frameworks": {
-        "net6.0": {
-          "targetAlias": "net6.0",
+        "net60": {
           "dependencies": {
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
@@ -116,55 +96,38 @@
               "version": "[6.0.0, )"
             }
           },
-          "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48",
-            "net481"
-          ],
-          "assetTargetFallback": true,
-          "warn": true,
-          "frameworkReferences": {
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            }
-          },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "E:\\Code\\VSDiTasks\\VSDiTask.WebAPI\\VSDiTask.Users\\VSDiTask.Users.csproj": {
+    "E:\\Coding\\VSDiTask\\VSDiTask.WebAPI\\VSDiTask.Users\\VSDiTask.Users.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Code\\VSDiTasks\\VSDiTask.WebAPI\\VSDiTask.Users\\VSDiTask.Users.csproj",
+        "projectUniqueName": "E:\\Coding\\VSDiTask\\VSDiTask.WebAPI\\VSDiTask.Users\\VSDiTask.Users.csproj",
         "projectName": "VSDiTask.Users",
-        "projectPath": "E:\\Code\\VSDiTasks\\VSDiTask.WebAPI\\VSDiTask.Users\\VSDiTask.Users.csproj",
-        "packagesPath": "C:\\Users\\truon\\.nuget\\packages\\",
-        "outputPath": "E:\\Code\\VSDiTasks\\VSDiTask.WebAPI\\VSDiTask.Users\\obj\\",
+        "projectPath": "E:\\Coding\\VSDiTask\\VSDiTask.WebAPI\\VSDiTask.Users\\VSDiTask.Users.csproj",
+        "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
+        "outputPath": "E:\\Coding\\VSDiTask\\VSDiTask.WebAPI\\VSDiTask.Users\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\truon\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net6.0"
+          "net60"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://www.nuget.org/api/v2/curated-feeds/microsoftdotnet/": {}
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net6.0": {
-            "targetAlias": "net6.0",
+          "net60": {
             "projectReferences": {
-              "E:\\Code\\VSDiTasks\\VSDiTask.WebAPI\\VSdiTask.Common.Extensions\\VSDiTask.Common.Extensions.csproj": {
-                "projectPath": "E:\\Code\\VSDiTasks\\VSDiTask.WebAPI\\VSdiTask.Common.Extensions\\VSDiTask.Common.Extensions.csproj"
+              "E:\\Coding\\VSDiTask\\VSDiTask.WebAPI\\VSdiTask.Common.Extensions\\VSDiTask.Common.Extensions.csproj": {
+                "projectPath": "E:\\Coding\\VSDiTask\\VSDiTask.WebAPI\\VSdiTask.Common.Extensions\\VSDiTask.Common.Extensions.csproj"
               },
-              "E:\\Code\\VSDiTasks\\VSDiTask.WebAPI\\VSDiTask.Data\\VSDiTask.Core.csproj": {
-                "projectPath": "E:\\Code\\VSDiTasks\\VSDiTask.WebAPI\\VSDiTask.Data\\VSDiTask.Core.csproj"
+              "E:\\Coding\\VSDiTask\\VSDiTask.WebAPI\\VSDiTask.Data\\VSDiTask.Core.csproj": {
+                "projectPath": "E:\\Coding\\VSDiTask\\VSDiTask.WebAPI\\VSDiTask.Data\\VSDiTask.Core.csproj"
               }
             }
           }
@@ -176,25 +139,14 @@
         }
       },
       "frameworks": {
-        "net6.0": {
-          "targetAlias": "net6.0",
-          "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48",
-            "net481"
-          ],
-          "assetTargetFallback": true,
-          "warn": true,
-          "frameworkReferences": {
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
+        "net60": {
+          "dependencies": {
+            "Light.GuardClauses": {
+              "target": "Package",
+              "version": "[10.0.0, )"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }

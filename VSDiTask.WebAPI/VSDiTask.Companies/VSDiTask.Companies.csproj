@@ -6,4 +6,14 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Light.GuardClauses" Version="10.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\VSDiTask.Data\VSDiTask.Core.csproj" />
+    <ProjectReference Include="..\VSDiTask.Services\VSDiTask.Departments.csproj" />
+    <ProjectReference Include="..\VSDiTask.Users\VSDiTask.Users.csproj" />
+  </ItemGroup>
+
 </Project>

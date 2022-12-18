@@ -10,15 +10,3 @@ E:\Code\VSDiTasks\VSDiTask.WebAPI\VSdiTask.Common.Extensions\obj\Debug\net6.0\VS
 E:\Code\VSDiTasks\VSDiTask.WebAPI\VSdiTask.Common.Extensions\obj\Debug\net6.0\refint\VSdiTask.Common.Extensions.dll
 E:\Code\VSDiTasks\VSDiTask.WebAPI\VSdiTask.Common.Extensions\obj\Debug\net6.0\VSdiTask.Common.Extensions.pdb
 E:\Code\VSDiTasks\VSDiTask.WebAPI\VSdiTask.Common.Extensions\obj\Debug\net6.0\ref\VSdiTask.Common.Extensions.dll
-E:\Coding\VSDiTask\VSDiTask.WebAPI\VSdiTask.Common.Extensions\obj\Debug\net6.0\VSDiTask.Common.Extensions.dll
-E:\Coding\VSDiTask\VSDiTask.WebAPI\VSdiTask.Common.Extensions\obj\Debug\net6.0\refint\VSDiTask.Common.Extensions.dll
-E:\Coding\VSDiTask\VSDiTask.WebAPI\VSdiTask.Common.Extensions\obj\Debug\net6.0\VSDiTask.Common.Extensions.pdb
-E:\Coding\VSDiTask\VSDiTask.WebAPI\VSdiTask.Common.Extensions\bin\Debug\net6.0\VSDiTask.Common.Extensions.deps.json
-E:\Coding\VSDiTask\VSDiTask.WebAPI\VSdiTask.Common.Extensions\bin\Debug\net6.0\VSDiTask.Common.Extensions.dll
-E:\Coding\VSDiTask\VSDiTask.WebAPI\VSdiTask.Common.Extensions\bin\Debug\net6.0\VSDiTask.Common.Extensions.pdb
-E:\Coding\VSDiTask\VSDiTask.WebAPI\VSdiTask.Common.Extensions\obj\Debug\net6.0\VSDiTask.Common.Extensions.csproj.AssemblyReference.cache
-E:\Coding\VSDiTask\VSDiTask.WebAPI\VSdiTask.Common.Extensions\obj\Debug\net6.0\VSDiTask.Common.Extensions.GeneratedMSBuildEditorConfig.editorconfig
-E:\Coding\VSDiTask\VSDiTask.WebAPI\VSdiTask.Common.Extensions\obj\Debug\net6.0\VSDiTask.Common.Extensions.AssemblyInfoInputs.cache
-E:\Coding\VSDiTask\VSDiTask.WebAPI\VSdiTask.Common.Extensions\obj\Debug\net6.0\VSDiTask.Common.Extensions.AssemblyInfo.cs
-E:\Coding\VSDiTask\VSDiTask.WebAPI\VSdiTask.Common.Extensions\obj\Debug\net6.0\VSDiTask.Common.Extensions.csproj.CoreCompileInputs.cache
-E:\Coding\VSDiTask\VSDiTask.WebAPI\VSdiTask.Common.Extensions\obj\Debug\net6.0\ref\VSDiTask.Common.Extensions.dll

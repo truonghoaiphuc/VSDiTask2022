@@ -17,7 +17,11 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\VSdiTask.Common.Extensions\VSDiTask.Common.Extensions.csproj" />
+    <ProjectReference Include="..\VSDiTask.Companies\VSDiTask.Companies.csproj" />
     <ProjectReference Include="..\VSDiTask.Data\VSDiTask.Core.csproj" />
+    <ProjectReference Include="..\VSDiTask.Roles\VSDiTask.Roles.csproj" />
+    <ProjectReference Include="..\VSDiTask.Services\VSDiTask.Departments.csproj" />
     <ProjectReference Include="..\VSDiTask.Users\VSDiTask.Users.csproj" />
   </ItemGroup>
 

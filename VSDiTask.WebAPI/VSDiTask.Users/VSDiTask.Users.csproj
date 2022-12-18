@@ -6,6 +6,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Light.GuardClauses" Version="10.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\VSdiTask.Common.Extensions\VSDiTask.Common.Extensions.csproj" />
     <ProjectReference Include="..\VSDiTask.Data\VSDiTask.Core.csproj" />
   </ItemGroup>
