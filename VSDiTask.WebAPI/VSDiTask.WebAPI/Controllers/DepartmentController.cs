@@ -16,28 +16,29 @@ namespace VSDiTask.WebAPI.Controllers
         [HttpGet]
         public async Task<IActionResult> Departments()
         {
-            var companies = await _departmentService.GetListDepartmentAsync(new VSDiTask.Services.Models.GetListDepartment.Request { });
-            return Ok(companies);
+            var depts = await _departmentService.GetListDepartmentAsync(new VSDiTask.Services.Models.GetListDepartment.Request { });
+            return Ok(depts);
         }
 
-        //[HttpPut]
-        //public async Task<IActionResult> UpdateDepartment(VSDiTask.Services.Models.AddDepartment.Request dept)
-        //{
-        //    return Ok(true);
-        //}
+        [HttpPut("update")]
+        public async Task<IActionResult> UpdateDepartment(VSDiTask.Services.Models.AddDepartment.RequestDept dept)
+        {
+            var depts = await _departmentService.UpdateDepartmentAsync(dept);
+            return Ok(depts);
+        }
 
-        //[HttpPost("add")]
-        //public async Task<IActionResult> Add(VSDiTask.Services.Models.AddDepartment.Request request)
-        //{
-        //    var comp = await _departmentService.AddDepartmentAsync(request);
-        //    return Ok(comp);
-        //}
+        [HttpPost("add")]
+        public async Task<IActionResult> Add(VSDiTask.Services.Models.AddDepartment.RequestDept request)
+        {
+            var comp = await _departmentService.AddDepartmentAsync(request);
+            return Ok(comp);
+        }
 
-        //[HttpDelete("delete")]
-        //public async Task<IActionResult> Delete(VSDiTask.Services.Models.AddDepartment.Request request)
-        //{
-        //    var comp = await _departmentService.DeleteDepartmentAsync(request);
-        //    return Ok(comp);
-        //}
+        [HttpDelete("delete")]
+        public async Task<IActionResult> Delete(string deptCode)
+        {
+            var comp = await _departmentService.DeleteDepartmentAsync(new VSDiTask.Services.Models.AddDepartment.RequestDept { DeptCode = deptCode });
+            return Ok(comp);
+        }
     }
 }

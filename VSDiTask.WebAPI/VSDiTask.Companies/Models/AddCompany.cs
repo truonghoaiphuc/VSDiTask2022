@@ -11,10 +11,18 @@ namespace VSDiTask.Services.Models
             public string? CompAddress { get; set; }
         }
 
-        public class Response
+        public class Response : Result
         {
-            public string? Id { get; set; }
-            public StatusCode? StatusCode { get; set; }
+            public bool Success { get; set; }
+
+            public Response(bool success)
+            {
+                Success = success;
+            }
+            public Response(StatusCode statusCode)
+            {
+                StatusCode = statusCode;
+            }
         }
     }
 }

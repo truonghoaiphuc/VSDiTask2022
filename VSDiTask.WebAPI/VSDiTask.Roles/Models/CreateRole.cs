@@ -1,14 +1,15 @@
 ﻿using VSDiTask.Users.Data;
 
-namespace VSDiTask.Services.Models
+namespace VSDiTask.Roles.Models
 {
-    public class AddDepartment
+    public class CreateRole
     {
-        public class RequestDept
+        public class RequestRole
         {
-            public string? DeptCode { get; set; }
-            public string? DeptName { get; set; }
-            public string? Branch { get; set; }
+            public string? RoleId { get; set; }
+            public string? RoleName { get; set; }
+            public bool IsAdmin { get; set; }
+            public string? Description { get; set; }
         }
 
         public class Response : Result

@@ -15,6 +15,7 @@ namespace VSDiTask.Infrastructure.data.configuration
             builder.Property(x => x.UserId)
                 .IsRequired();
             builder.Property(x => x.CreatedAt).HasDefaultValueSql("getutcdate()");
+            builder.Property(x => x.deleted).HasDefaultValue(false);
         }
     }
 }

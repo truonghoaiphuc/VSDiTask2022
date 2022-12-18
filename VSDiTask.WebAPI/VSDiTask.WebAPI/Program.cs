@@ -1,4 +1,5 @@
 using VSDiTask.Core;
+using VSDiTask.Roles;
 using VSDiTask.Services;
 using VSDiTask.WebAPI.Services;
 
@@ -20,6 +21,8 @@ builder.Services
     .AddInternalServices(builder.Configuration)
     .AddUserServices()
     .AddCompanyServices()
+    .AddDepartmentServices()
+    .AddRoleServices()
     .AddCors(p => p.AddPolicy("corspolicy", build =>
     {
         build.WithOrigins("*").AllowAnyMethod().AllowAnyHeader();

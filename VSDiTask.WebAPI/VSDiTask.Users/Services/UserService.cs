@@ -1,6 +1,8 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Light.GuardClauses;
+using Microsoft.EntityFrameworkCore;
 using VSDiTask.Common.Extensions;
 using VSDiTask.Core.Data;
+using VSDiTask.Core.Entities.Enums;
 using VSDiTask.Users.Data;
 using VSDiTask.Users.Models;
 
@@ -13,7 +15,8 @@ namespace VSDiTask.Users.Services
 
         Task<UserToken> GetUserTokenInfoAsync(string username);
 
-        Task<AddUser.Response> AddUserAsync(AddUser.Request request);
+        Task<CreateUser.ResponseUser> AddUserAsync(CreateUser.RequestUser request);
+        Task<GetUser.Response> GetUserByAsync(string username);
 
     }
     public class UserService : IUserService
@@ -24,18 +27,15 @@ namespace VSDiTask.Users.Services
             _dbContextFactory = dbContextFactory;
         }
 
-        public async Task<AddUser.Response> AddUserAsync(AddUser.Request request)
+        public async Task<CreateUser.ResponseUser> AddUserAsync(CreateUser.RequestUser request)
         {
-            //request.MustNotBeNull();
-            //request.UserName.MustNotBeNullOrWhiteSpace();
-            //request.CompName.MustNotBeNullOrEmpty();            
+            request.MustNotBeNull();
+            request.UserName.MustNotBeNullOrWhiteSpace();
+            //request.CompName.MustNotBeNullOrEmpty();
 
-            AddUser.Response FailedResult(StatusCode statuscode)
+            CreateUser.ResponseUser FailedResult(StatusCode statuscode)
             {
-                return new AddUser.Response
-                {
-                    StatusCode = statuscode,
-                };
+                return new CreateUser.ResponseUser(statuscode);
             }
             using var context = _dbContextFactory.CreateDbContext();
 
@@ -62,10 +62,38 @@ namespace VSDiTask.Users.Services
             }).Entity;
 
             await context.SaveChangesAsync();
-            return new AddUser.Response
-            {
-                Id = entity.Id,
-            };
+            return new CreateUser.ResponseUser(true);
+        }
+
+        public async Task<GetUser.Response> GetUserByAsync(string username)
+        {
+            using var context = _dbContextFactory.CreateDbContext();
+            return await context.AppUsers
+                .Where(r => r.UserName == username)
+                .Select(x => new GetUser.Response
+                {
+                    UserName = x.UserName,
+                    FirstName = x.FirstName,
+                    LastName = x.LastName,
+                    PhoneNumber = x.PhoneNumber,
+                    Address = x.Address,
+                    DateOfBirth = x.DateOfBirth,
+                    Gender = x.Gender,
+                    Avatar = x.Avatar,
+                    Permissions = context.Permissions
+                        .Where(y => y.RoleId == x.RoleId)
+                        .Select(c => new GetUser.UserPermission
+                        {
+                            RoleId = c.RoleId,
+                            FunctionId = c.FunctionId,
+                            CanRead = c.CanRead,
+                            CanCreate = c.CanCreate,
+                            CanUpdate = c.CanUpdate,
+                            CanDelete = c.CanDelete
+                        })
+                        .ToList()
+                })
+                .FirstOrDefaultAsync();
         }
 
         public async Task<UserToken> GetUserTokenInfoAsync(string username)
@@ -89,7 +117,7 @@ namespace VSDiTask.Users.Services
 
             var hash = HashExtensions.Hash(user.Password);
             var valid = await context.AppUsers
-                .Where(u => u.UserName == user.UserName && u.Password == hash)
+                .Where(u => u.UserName == user.UserName && u.Password == hash && u.Status == UserStatus.Active)
                 .AnyAsync();
             return valid;
         }

@@ -5,10 +5,10 @@ namespace VSDiTask.Services
 {
     public static class ServiceCollectionExtensions
     {
-        public static IServiceCollection AddDepartmentServices(this IServiceCollection services)
+        public static IServiceCollection AddCompanyServices(this IServiceCollection services)
         {
             return services
-                .AddScoped<IDepartmentService, DepartmentService>();
+                .AddScoped<ICompanyService, CompanyService>();
         }
     }
 }

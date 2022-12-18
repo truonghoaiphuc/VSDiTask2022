@@ -8,9 +8,9 @@ namespace VSDiTask.Services.Services
 {
     public interface IDepartmentService
     {
-        Task<AddDepartment.Response> AddDepartmentAsync(AddDepartment.Request dept);
-        Task<AddDepartment.Response> UpdateDepartmentAsync(AddDepartment.Request dept);
-        Task<AddDepartment.Response> DeleteDepartmentAsync(AddDepartment.Request dept);
+        Task<AddDepartment.Response> AddDepartmentAsync(AddDepartment.RequestDept dept);
+        Task<AddDepartment.Response> UpdateDepartmentAsync(AddDepartment.RequestDept dept);
+        Task<AddDepartment.Response> DeleteDepartmentAsync(AddDepartment.RequestDept dept);
         Task<List<GetListDepartment.Response>> GetListDepartmentAsync(GetListDepartment.Request request);
     }
     public class DepartmentService : IDepartmentService
@@ -22,7 +22,7 @@ namespace VSDiTask.Services.Services
 
         }
 
-        public async Task<AddDepartment.Response> AddDepartmentAsync(AddDepartment.Request dept)
+        public async Task<AddDepartment.Response> AddDepartmentAsync(AddDepartment.RequestDept dept)
         {
             dept.MustNotBeNull();
             dept.DeptCode.MustNotBeNullOrWhiteSpace();
@@ -31,10 +31,7 @@ namespace VSDiTask.Services.Services
 
             AddDepartment.Response FailedResult(StatusCode statuscode)
             {
-                return new AddDepartment.Response
-                {
-                    StatusCode = statuscode,
-                };
+                return new AddDepartment.Response(statuscode);
             }
             using var context = _vsdiTaskDbContextFactory.CreateDbContext();
 
@@ -51,23 +48,17 @@ namespace VSDiTask.Services.Services
             }).Entity;
 
             await context.SaveChangesAsync();
-            return new AddDepartment.Response
-            {
-                Id = entity.DeptCode,
-            };
+            return new AddDepartment.Response(true);
         }
 
-        public async Task<AddDepartment.Response> DeleteDepartmentAsync(AddDepartment.Request dept)
+        public async Task<AddDepartment.Response> DeleteDepartmentAsync(AddDepartment.RequestDept dept)
         {
             dept.MustNotBeNull();
             dept.DeptCode.MustNotBeNullOrWhiteSpace();
 
             AddDepartment.Response FailedResult(StatusCode statuscode)
             {
-                return new AddDepartment.Response
-                {
-                    StatusCode = statuscode,
-                };
+                return new AddDepartment.Response(statuscode);
             }
             using var context = _vsdiTaskDbContextFactory.CreateDbContext();
 
@@ -78,10 +69,7 @@ namespace VSDiTask.Services.Services
             var entity = context.Departments.Remove(dep).Entity;
 
             await context.SaveChangesAsync();
-            return new AddDepartment.Response
-            {
-                Id = entity.DeptCode,
-            };
+            return new AddDepartment.Response(true);
         }
 
         public async Task<List<GetListDepartment.Response>> GetListDepartmentAsync(GetListDepartment.Request request)
@@ -97,7 +85,7 @@ namespace VSDiTask.Services.Services
                 .ToListAsync();
         }
 
-        public async Task<AddDepartment.Response> UpdateDepartmentAsync(AddDepartment.Request dept)
+        public async Task<AddDepartment.Response> UpdateDepartmentAsync(AddDepartment.RequestDept dept)
         {
             dept.MustNotBeNull();
             dept.DeptCode.MustNotBeNullOrWhiteSpace();
@@ -106,10 +94,7 @@ namespace VSDiTask.Services.Services
 
             AddDepartment.Response FailedResult(StatusCode statuscode)
             {
-                return new AddDepartment.Response
-                {
-                    StatusCode = statuscode,
-                };
+                return new AddDepartment.Response(statuscode);
             }
             using var context = _vsdiTaskDbContextFactory.CreateDbContext();
 
@@ -123,10 +108,7 @@ namespace VSDiTask.Services.Services
             var entity = context.Departments.Update(dep).Entity;
 
             await context.SaveChangesAsync();
-            return new AddDepartment.Response
-            {
-                Id = entity.DeptCode,
-            };
+            return new AddDepartment.Response(true);
         }
 
         private Task<bool> IsDepartmentExist(VSDiTaskDBContext context, string code)

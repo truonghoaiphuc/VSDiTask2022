@@ -14,5 +14,11 @@ namespace VSDiTask.Users.Data
         Department_not_exist = 5,
         [Description("Người dùng đã tồn tại trong hệ thống")]
         User_already_exist = 6,
+        [Description("Người dùng đã tồn tại trong hệ thống")]
+        User_not_exist = 7,
+        [Description("Nhóm người dùng đã tồn tại trong hệ thống")]
+        Role_already_exist = 8,
+        [Description("Nhóm người dùng không tồn tại trong hệ thống")]
+        Role_not_exist = 9,
     }
 }

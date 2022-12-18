@@ -14,10 +14,17 @@ namespace VSDiTask.WebAPI.Controllers
         }
 
         [HttpPost("add")]
-        public async Task<IActionResult> AddUser(VSDiTask.Users.Models.AddUser.Request request)
+        public async Task<IActionResult> AddUser(VSDiTask.Users.Models.CreateUser.RequestUser request)
         {
             var comp = await _userService.AddUserAsync(request);
             return Ok(comp);
+        }
+
+        [HttpGet("{username}")]
+        public async Task<IActionResult> GetUserPermissionBy(string username)
+        {
+            var permissions = await _userService.GetUserByAsync(username);
+            return Ok(permissions);
         }
     }
 }

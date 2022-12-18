@@ -31,10 +31,7 @@ namespace VSDiTask.Services.Services
 
             AddCompany.Response FailedResult(StatusCode statuscode)
             {
-                return new AddCompany.Response
-                {
-                    StatusCode = statuscode,
-                };
+                return new AddCompany.Response(statuscode);
             }
             using var context = _vsdiTaskDbContextFactory.CreateDbContext();
 
@@ -51,10 +48,7 @@ namespace VSDiTask.Services.Services
             }).Entity;
 
             await context.SaveChangesAsync();
-            return new AddCompany.Response
-            {
-                Id = entity.CompCode,
-            };
+            return new AddCompany.Response(true);
         }
 
         public async Task<AddCompany.Response> DeleteCompanyAsync(AddCompany.Request company)
@@ -64,10 +58,7 @@ namespace VSDiTask.Services.Services
 
             AddCompany.Response FailedResult(StatusCode statuscode)
             {
-                return new AddCompany.Response
-                {
-                    StatusCode = statuscode,
-                };
+                return new AddCompany.Response(statuscode);
             }
             using var context = _vsdiTaskDbContextFactory.CreateDbContext();
 
@@ -78,10 +69,7 @@ namespace VSDiTask.Services.Services
             var entity = context.Companies.Remove(comp).Entity;
 
             await context.SaveChangesAsync();
-            return new AddCompany.Response
-            {
-                Id = entity.CompCode,
-            };
+            return new AddCompany.Response(true);
         }
 
         public async Task<List<GetListCompany.Response>> GetAllCompanyAsync(GetListCompany.Request request)
@@ -127,10 +115,7 @@ namespace VSDiTask.Services.Services
 
             AddCompany.Response FailedResult(StatusCode statuscode)
             {
-                return new AddCompany.Response
-                {
-                    StatusCode = statuscode,
-                };
+                return new AddCompany.Response(statuscode);
             }
             using var context = _vsdiTaskDbContextFactory.CreateDbContext();
 
@@ -144,10 +129,7 @@ namespace VSDiTask.Services.Services
             var entity = context.Companies.Update(comp).Entity;
 
             await context.SaveChangesAsync();
-            return new AddCompany.Response
-            {
-                Id = entity.CompCode,
-            };
+            return new AddCompany.Response(true);
         }
 
         private Task<bool> IsCompanyExist(VSDiTaskDBContext context, string code)

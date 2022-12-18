@@ -37,14 +37,17 @@ namespace VSDiTask.WebAPI.Controllers
         [HttpPost("add")]
         public async Task<IActionResult> Add(VSDiTask.Services.Models.AddCompany.Request request)
         {
+            if (!ModelState.IsValid)
+                return BadRequest();
+
             var comp = await _companyService.AddCompanyAsync(request);
             return Ok(comp);
         }
 
         [HttpDelete("delete")]
-        public async Task<IActionResult> Delete(VSDiTask.Services.Models.AddCompany.Request request)
+        public async Task<IActionResult> Delete(string code)
         {
-            var comp = await _companyService.DeleteCompanyAsync(request);
+            var comp = await _companyService.DeleteCompanyAsync(new VSDiTask.Services.Models.AddCompany.Request { CompCode = code });
             return Ok(comp);
         }
     }

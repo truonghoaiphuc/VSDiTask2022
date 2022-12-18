@@ -14,6 +14,7 @@
         public DateTimeOffset CreatedAt { get; set; }
         public string UpdatedId { get; set; }
         public DateTimeOffset UpdatedAt { get; set; }
+        public bool deleted { get; set; } = false;
 
         public List<ITaskDiscuss> ITaskDiscusses { get; set; } = new List<ITaskDiscuss>();
     }
