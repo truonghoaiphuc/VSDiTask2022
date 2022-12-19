@@ -3,11 +3,15 @@
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\VSDiTask.Infrastructure\VSDiTask.Infrastructure.csproj" />
+    <PackageReference Include="Light.GuardClauses" Version="10.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\VSdiTask.Common.Extensions\VSDiTask.Common.Extensions.csproj" />
+    <ProjectReference Include="..\VSDiTask.Data\VSDiTask.Core.csproj" />
   </ItemGroup>
 
 </Project>

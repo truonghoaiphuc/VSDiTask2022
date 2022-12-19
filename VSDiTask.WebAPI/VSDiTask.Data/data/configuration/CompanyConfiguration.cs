@@ -8,15 +8,15 @@ namespace VSDiTask.Infrastructure.data.configuration
     {
         public void Configure(EntityTypeBuilder<Company> builder)
         {
-            builder.ToTable("Product", "products");
+            builder.ToTable("Companies");
 
-            builder.Property(x => x.CompanyName)
+            builder.Property(x => x.CompName)
                 .IsRequired()
                 .HasMaxLength(250);
-            builder.Property(x => x.CompanyCode)
+            builder.Property(x => x.CompCode)
                 .IsRequired()
                 .HasMaxLength(200);
-            builder.HasIndex(x => x.CompanyCode)
+            builder.HasIndex(x => x.CompCode)
                 .IsUnique();
         }
     }

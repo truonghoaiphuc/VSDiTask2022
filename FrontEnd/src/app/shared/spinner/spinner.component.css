@@ -1,0 +1,77 @@
+.spinner {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: animateBg 10s linear infinite;
+}
+@keyframes animateBg {
+  0% {
+    filter: rotate(0deg);
+  }
+  100% {
+    filter: rotate(360deg);
+  }
+}
+.spinner .loader {
+  position: relative;
+  width: 50px;
+  height: 50px;
+}
+/* .spinner .loader logo {
+  display: flex;
+  justify-content: center;
+  align-items: center; */
+/* width: 100%;
+  height: 100%;
+} */
+
+.spinner .loader .logo img {
+  width: 100%;
+  height: 100%;
+  margin-top: 6px;
+}
+.spinner .loader span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: rotate(calc(18deg * var(--i)));
+}
+.spinner .loader span::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #ffffff;
+  box-shadow: 0 0 10px #e5e5eb, 0 0 10px #e5e5eb, 0 0 20px #e5e5eb,
+    0 0 40px #e5e5eb, 0 0 60px #e5e5eb, 0 0 80px #e5e5eb;
+  animation: animate 2s linear infinite;
+  animation-delay: calc(0.1s * var(--i));
+}
+@keyframes animate {
+  0% {
+    transform: scale(1);
+  }
+  80%,
+  100% {
+    transform: scale(0);
+  }
+}
+/*
+@media only screen and (max-width: 767px) {
+  .spinner {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100%;
+    animation: animateBg 10s linear infinite;
+  }
+} */

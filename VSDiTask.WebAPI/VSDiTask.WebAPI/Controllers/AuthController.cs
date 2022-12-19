@@ -23,7 +23,7 @@ namespace VSDiTask.WebAPI.Controllers
         [AllowAnonymous]
         public async Task<IActionResult> Login(UserLogin user)
         {
-            if (ModelState.IsValid)
+            if (!ModelState.IsValid)
             {
                 return BadRequest();
             }
@@ -32,8 +32,8 @@ namespace VSDiTask.WebAPI.Controllers
 
             if (valid)
             {
-                var usertoken = await _userService.GetUserTokenInfoAsync(user.UserName);
-                var token = _tokenService.GetToken(usertoken, 60);
+                var userinfo = await _userService.GetUserTokenInfoAsync(user.UserName);
+                var token = _tokenService.GetToken(userinfo);
 
                 return Ok(new
                 {

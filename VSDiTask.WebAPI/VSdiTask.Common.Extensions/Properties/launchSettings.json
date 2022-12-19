@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "VSDiTask.Common.Extensions": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "applicationUrl": "https://localhost:34292;http://localhost:34293"
+    }
+  }
+}

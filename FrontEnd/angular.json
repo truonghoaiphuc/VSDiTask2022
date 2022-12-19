@@ -25,10 +25,7 @@
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
-            "assets": [
-              "src/favicon.ico",
-              "src/assets"
-            ],
+            "assets": ["src/favicon.ico", "src/assets"],
             "styles": [
               "node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
               "node_modules/primeicons/primeicons.css",
@@ -38,11 +35,10 @@
               "node_modules/bootstrap/dist/css/bootstrap.css",
               "node_modules/primeflex/primeflex.css",
               "node_modules/ngx-toastr/toastr.css",
-              "src/styles.css"
+              "src/styles.css",
+              "src/assets/styles/style.scss"
             ],
-            "scripts": [
-              "node_modules/bootstrap/dist/js/bootstrap.bundle.js"
-            ]
+            "scripts": ["node_modules/bootstrap/dist/js/bootstrap.bundle.js"]
           },
           "configurations": {
             "production": {
@@ -84,10 +80,10 @@
               "browserTarget": "VSDiTasks:build:production"
             },
             "development": {
-              "browserTarget": "VSDiTasks:build:development"
+              "browserTarget": "VSDiTasks:build:development",
+              "proxyConfig": "proxy.conf.js"
             }
-          },
-          "defaultConfiguration": "development"
+          }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
@@ -95,6 +91,7 @@
             "browserTarget": "VSDiTasks:build"
           }
         },
+
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
@@ -102,10 +99,7 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.spec.json",
             "karmaConfig": "karma.conf.js",
-            "assets": [
-              "src/favicon.ico",
-              "src/assets"
-            ],
+            "assets": ["src/favicon.ico", "src/assets"],
             "styles": [
               "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.css"

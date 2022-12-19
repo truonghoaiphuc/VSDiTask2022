@@ -2,18 +2,26 @@
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
+    <IsPackable>false</IsPackable>
+    <SpaProxyServerUrl>https://localhost:8200</SpaProxyServerUrl>
+    <SpaProxyLaunchCommand>yarn start</SpaProxyLaunchCommand>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="6.0.8" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="6.0.8" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
     <PackageReference Include="System.Configuration.ConfigurationManager" Version="4.7.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\VSDiTask.Infrastructure\VSDiTask.Infrastructure.csproj" />
+    <ProjectReference Include="..\VSdiTask.Common.Extensions\VSDiTask.Common.Extensions.csproj" />
+    <ProjectReference Include="..\VSDiTask.Companies\VSDiTask.Companies.csproj" />
+    <ProjectReference Include="..\VSDiTask.Data\VSDiTask.Core.csproj" />
+    <ProjectReference Include="..\VSDiTask.Roles\VSDiTask.Roles.csproj" />
+    <ProjectReference Include="..\VSDiTask.Services\VSDiTask.Departments.csproj" />
     <ProjectReference Include="..\VSDiTask.Users\VSDiTask.Users.csproj" />
   </ItemGroup>
 

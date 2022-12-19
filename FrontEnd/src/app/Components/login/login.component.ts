@@ -38,27 +38,27 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
   }
   onSubmit(){
-    if(!this.loginForm.valid){
-      return;
-    }
-    this.loading=true;
-    this.authenService.login(this.loginForm.value).pipe(
-      tap(()=>this.loading=true)
-    )
-    .subscribe({
-      next: (response:any)=>{
-      const user : LoggedInUser = response;
-      if(user && user.access_token){
-        localStorage.removeItem(SystemConstants.CURRENT_USER);
-        localStorage.setItem(SystemConstants.CURRENT_USER, JSON.stringify(user));
-        this.loading=false;
-        this.router.navigate(['congty']);
-      }
-    }
-    , error: (error)=>{
-      this.messageService.add({severity:'error', summary: 'Đăng nhập', detail: "Tên đăng nhập hoặc mật khẩu không hợp lệ", life: 3000});
-      this.loading=false;
-    }
-  })
+  //   if(!this.loginForm.valid){
+  //     return;
+  //   }
+  //   this.loading=true;
+  //   this.authenService.login(this.loginForm.value).pipe(
+  //     tap(()=>this.loading=true)
+  //   )
+  //   .subscribe({
+  //     next: (response:any)=>{
+  //     const user : LoggedInUser = response;
+  //     if(user && user.access_token){
+  //       localStorage.removeItem(SystemConstants.CURRENT_USER);
+  //       localStorage.setItem(SystemConstants.CURRENT_USER, JSON.stringify(user));
+  //       this.loading=false;
+  //       this.router.navigate(['congty']);
+  //     }
+  //   }
+  //   , error: (error)=>{
+  //     this.messageService.add({severity:'error', summary: 'Đăng nhập', detail: "Tên đăng nhập hoặc mật khẩu không hợp lệ", life: 3000});
+  //     this.loading=false;
+  //   }
+  // })
   }
 }
