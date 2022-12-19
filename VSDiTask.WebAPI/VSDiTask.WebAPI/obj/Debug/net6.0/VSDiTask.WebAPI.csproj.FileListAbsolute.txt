@@ -71,3 +71,12 @@ E:\Code\VSDiTasks\VSDiTask.WebAPI\VSDiTask.WebAPI\bin\Debug\net6.0\Microsoft.Ext
 E:\Code\VSDiTasks\VSDiTask.WebAPI\VSDiTask.WebAPI\bin\Debug\net6.0\Microsoft.Extensions.Identity.Stores.dll
 E:\Code\VSDiTasks\VSDiTask.WebAPI\VSDiTask.WebAPI\bin\Debug\net6.0\VSDiTask.Common.Extensions.dll
 E:\Code\VSDiTasks\VSDiTask.WebAPI\VSDiTask.WebAPI\bin\Debug\net6.0\VSDiTask.Common.Extensions.pdb
+E:\Code\VSDiTasks\VSDiTask.WebAPI\VSDiTask.WebAPI\bin\Debug\net6.0\Light.GuardClauses.dll
+E:\Code\VSDiTasks\VSDiTask.WebAPI\VSDiTask.WebAPI\bin\Debug\net6.0\VSDiTask.Companies.dll
+E:\Code\VSDiTasks\VSDiTask.WebAPI\VSDiTask.WebAPI\bin\Debug\net6.0\VSDiTask.Departments.dll
+E:\Code\VSDiTasks\VSDiTask.WebAPI\VSDiTask.WebAPI\bin\Debug\net6.0\VSDiTask.Infrastructure.dll
+E:\Code\VSDiTasks\VSDiTask.WebAPI\VSDiTask.WebAPI\bin\Debug\net6.0\VSDiTask.Roles.dll
+E:\Code\VSDiTasks\VSDiTask.WebAPI\VSDiTask.WebAPI\bin\Debug\net6.0\VSDiTask.Companies.pdb
+E:\Code\VSDiTasks\VSDiTask.WebAPI\VSDiTask.WebAPI\bin\Debug\net6.0\VSDiTask.Roles.pdb
+E:\Code\VSDiTasks\VSDiTask.WebAPI\VSDiTask.WebAPI\bin\Debug\net6.0\VSDiTask.Departments.pdb
+E:\Code\VSDiTasks\VSDiTask.WebAPI\VSDiTask.WebAPI\bin\Debug\net6.0\VSDiTask.Infrastructure.pdb

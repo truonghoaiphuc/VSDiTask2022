@@ -26,5 +26,12 @@ namespace VSDiTask.WebAPI.Controllers
             var permissions = await _userService.GetUserByAsync(username);
             return Ok(permissions);
         }
+
+        [HttpGet()]
+        public async Task<IActionResult> GetListUser()
+        {
+            var users = await _userService.GetListUserAsync();
+            return Ok(users);
+        }
     }
 }

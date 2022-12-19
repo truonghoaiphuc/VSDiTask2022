@@ -17,6 +17,7 @@ namespace VSDiTask.Users.Services
 
         Task<CreateUser.ResponseUser> AddUserAsync(CreateUser.RequestUser request);
         Task<GetUser.Response> GetUserByAsync(string username);
+        Task<List<GetListUser.Response>> GetListUserAsync();
 
     }
     public class UserService : IUserService
@@ -63,6 +64,33 @@ namespace VSDiTask.Users.Services
 
             await context.SaveChangesAsync();
             return new CreateUser.ResponseUser(true);
+        }
+
+        public async Task<List<GetListUser.Response>> GetListUserAsync()
+        {
+            using var context = _dbContextFactory.CreateDbContext();
+
+            return await context.AppUsers
+                .Select(x => new GetListUser.Response
+                {
+                    Id = x.Id,
+                    UserName = x.UserName,
+                    FirstName = x.FirstName,
+                    LastName = x.LastName,
+                    PhoneNumber = x.PhoneNumber,
+                    Address = x.Address,
+                    DateOfBirth = x.DateOfBirth,
+                    Gender = x.Gender,
+                    Avatar = x.Avatar,
+                    DeptId = x.DeptId,
+                    Status = x.Status,
+                    DeptName = x.Department.DeptName,
+                    RoleId = x.RoleId,
+                    RoleName = x.Role.RoleName,
+                    createdDate = x.CreatedAt,
+                    createdId = x.CreatedId
+                })
+                .ToListAsync();
         }
 
         public async Task<GetUser.Response> GetUserByAsync(string username)

@@ -3,7 +3,7 @@ using VSDiTask.Core.Entities.Enums;
 
 namespace VSDiTask.Core.Entities
 {
-    public class User : BaseEntity
+    public class User : BaseEntity, ICreatedEntity, IUpdateEntity
     {
         public string UserName { get; set; }
         public string Password { get; set; }
@@ -23,5 +23,10 @@ namespace VSDiTask.Core.Entities
         public Role Role { get; set; }
 
         public List<Permission> Permissions { get; set; } = new List<Permission>();
+
+        public string CreatedId { get; set; }
+        public DateTimeOffset CreatedAt { get; set; }
+        public string UpdatedId { get; set; }
+        public DateTimeOffset UpdatedAt { get; set; }
     }
 }

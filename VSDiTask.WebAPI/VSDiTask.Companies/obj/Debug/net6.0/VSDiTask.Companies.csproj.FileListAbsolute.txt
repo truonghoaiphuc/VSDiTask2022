@@ -10,3 +10,14 @@ E:\Code\VSDiTasks\VSDiTask.WebAPI\VSDiTask.Companies\obj\Debug\net6.0\VSDiTask.C
 E:\Code\VSDiTasks\VSDiTask.WebAPI\VSDiTask.Companies\obj\Debug\net6.0\refint\VSDiTask.Companies.dll
 E:\Code\VSDiTasks\VSDiTask.WebAPI\VSDiTask.Companies\obj\Debug\net6.0\VSDiTask.Companies.pdb
 E:\Code\VSDiTasks\VSDiTask.WebAPI\VSDiTask.Companies\obj\Debug\net6.0\ref\VSDiTask.Companies.dll
+E:\Code\VSDiTasks\VSDiTask.WebAPI\VSDiTask.Companies\bin\Debug\net6.0\VSDiTask.Common.Extensions.dll
+E:\Code\VSDiTasks\VSDiTask.WebAPI\VSDiTask.Companies\bin\Debug\net6.0\VSDiTask.Core.dll
+E:\Code\VSDiTasks\VSDiTask.WebAPI\VSDiTask.Companies\bin\Debug\net6.0\VSDiTask.Departments.dll
+E:\Code\VSDiTasks\VSDiTask.WebAPI\VSDiTask.Companies\bin\Debug\net6.0\VSDiTask.Infrastructure.dll
+E:\Code\VSDiTasks\VSDiTask.WebAPI\VSDiTask.Companies\bin\Debug\net6.0\VSDiTask.Users.dll
+E:\Code\VSDiTasks\VSDiTask.WebAPI\VSDiTask.Companies\bin\Debug\net6.0\VSDiTask.Core.pdb
+E:\Code\VSDiTasks\VSDiTask.WebAPI\VSDiTask.Companies\bin\Debug\net6.0\VSDiTask.Departments.pdb
+E:\Code\VSDiTasks\VSDiTask.WebAPI\VSDiTask.Companies\bin\Debug\net6.0\VSDiTask.Users.pdb
+E:\Code\VSDiTasks\VSDiTask.WebAPI\VSDiTask.Companies\bin\Debug\net6.0\VSDiTask.Common.Extensions.pdb
+E:\Code\VSDiTasks\VSDiTask.WebAPI\VSDiTask.Companies\bin\Debug\net6.0\VSDiTask.Infrastructure.pdb
+E:\Code\VSDiTasks\VSDiTask.WebAPI\VSDiTask.Companies\obj\Debug\net6.0\VSDiTask.Companies.csproj.CopyComplete
