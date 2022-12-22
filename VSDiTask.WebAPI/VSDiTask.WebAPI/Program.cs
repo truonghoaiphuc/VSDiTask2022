@@ -23,6 +23,7 @@ builder.Services
     .AddCompanyServices()
     .AddDepartmentServices()
     .AddRoleServices()
+    .AddTitleServices()
     .AddCors(p => p.AddPolicy("corspolicy", build =>
     {
         build.WithOrigins("*").AllowAnyMethod().AllowAnyHeader();

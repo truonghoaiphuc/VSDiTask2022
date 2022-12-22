@@ -15,6 +15,7 @@ namespace VSDiTask.Core.Data
         public DbSet<Company> Companies { get; set; }
         public DbSet<Department> Departments { get; set; }
         public DbSet<Role> Role { get; set; }
+        public DbSet<Title> Titles { get; set; }
         public DbSet<Function> Functions { get; set; }
         public DbSet<Permission> Permissions { get; set; }
         public DbSet<ITask> ITasks { get; set; }
@@ -31,6 +32,7 @@ namespace VSDiTask.Core.Data
             modelBuilder.ApplyConfiguration(new CompanyConfiguration());
             modelBuilder.ApplyConfiguration(new DepartmentConfiguration());
             modelBuilder.ApplyConfiguration(new RoleConfiguration());
+            modelBuilder.ApplyConfiguration(new TitleConfiguration());
             modelBuilder.ApplyConfiguration(new FunctionConfiguration());
             modelBuilder.ApplyConfiguration(new PermissionConfiguration());
             modelBuilder.ApplyConfiguration(new ITaskConfiguration());

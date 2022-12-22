@@ -21,6 +21,9 @@ namespace VSDiTask.Core.Entities
         public Department Department { get; set; }
         public string RoleId { get; set; }
         public Role Role { get; set; }
+        public string TitleId { get; set; }
+        public Title Title { get; set; }
+
 
         public List<Permission> Permissions { get; set; } = new List<Permission>();
 

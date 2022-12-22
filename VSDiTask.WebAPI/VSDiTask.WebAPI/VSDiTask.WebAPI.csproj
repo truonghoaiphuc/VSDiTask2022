@@ -22,6 +22,7 @@
     <ProjectReference Include="..\VSDiTask.Data\VSDiTask.Core.csproj" />
     <ProjectReference Include="..\VSDiTask.Roles\VSDiTask.Roles.csproj" />
     <ProjectReference Include="..\VSDiTask.Services\VSDiTask.Departments.csproj" />
+    <ProjectReference Include="..\VSDiTask.Titles\VSDiTask.Titles.csproj" />
     <ProjectReference Include="..\VSDiTask.Users\VSDiTask.Users.csproj" />
   </ItemGroup>
 
