@@ -20,6 +20,7 @@ namespace VSDiTask.Users.Models
             public UserStatus Status { get; set; }
             public string DeptId { get; set; }
             public string RoleId { get; set; }
+            public string TitleId { get; set; }
         }
 
         public class ResponseUser : Result
@@ -33,6 +34,7 @@ namespace VSDiTask.Users.Models
             }
             public ResponseUser(StatusCode statusCode)
             {
+                Success = false;
                 StatusCode = statusCode;
             }
         }

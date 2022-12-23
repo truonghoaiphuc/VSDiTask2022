@@ -20,6 +20,13 @@ namespace VSDiTask.WebAPI.Controllers
             return Ok(comp);
         }
 
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> DeleteUser(long id)
+        {
+            var result = await _userService.DeleteUserAsync(id);
+            return Ok(result);
+        }
+
         [HttpGet("{username}")]
         public async Task<IActionResult> GetUserPermissionBy(string username)
         {

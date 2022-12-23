@@ -16,6 +16,7 @@ namespace VSDiTask.Users.Services
         Task<UserToken> GetUserTokenInfoAsync(string username);
 
         Task<CreateUser.ResponseUser> AddUserAsync(CreateUser.RequestUser request);
+        Task<CreateUser.ResponseUser> DeleteUserAsync(long id);
         Task<GetUser.Response> GetUserByAsync(string username);
         Task<List<GetListUser.Response>> GetListUserAsync();
 
@@ -57,11 +58,23 @@ namespace VSDiTask.Users.Services
                 Address = request.Address,
                 Gender = request.Gender,
                 Avatar = request.Avatar,
-                Status = request.Status,
+                Status = UserStatus.InActive,
                 DeptId = request.DeptId,
-                RoleId = request.RoleId
+                RoleId = request.RoleId,
+                TitleId = request.TitleId
             }).Entity;
 
+            await context.SaveChangesAsync();
+            return new CreateUser.ResponseUser(true);
+        }
+
+        public async Task<CreateUser.ResponseUser> DeleteUserAsync(long id)
+        {
+            using var context = _dbContextFactory.CreateDbContext();
+            var us = await context.AppUsers.Where(x => x.Id == id).FirstOrDefaultAsync();
+            if (us == null)
+                return new CreateUser.ResponseUser(StatusCode.User_not_exist);
+            context.AppUsers.Remove(us);
             await context.SaveChangesAsync();
             return new CreateUser.ResponseUser(true);
         }
@@ -87,6 +100,8 @@ namespace VSDiTask.Users.Services
                     DeptName = x.Department.DeptName,
                     RoleId = x.RoleId,
                     RoleName = x.Role.RoleName,
+                    TitleId = x.TitleId,
+                    TitleName = x.Title.TitleName,
                     createdDate = x.CreatedAt,
                     createdId = x.CreatedId
                 })

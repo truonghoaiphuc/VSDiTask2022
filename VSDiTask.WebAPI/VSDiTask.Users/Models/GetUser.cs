@@ -26,6 +26,7 @@ namespace VSDiTask.Users.Models
             public string DeptName { get; set; }
             public string RoleId { get; set; }
             public string RoleName { get; set; }
+            public string TitleId { get; set; }
 
             public List<UserPermission> Permissions { get; set; } = new List<UserPermission>();
 

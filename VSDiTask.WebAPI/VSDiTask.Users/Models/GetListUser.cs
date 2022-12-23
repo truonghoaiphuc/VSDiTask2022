@@ -26,6 +26,8 @@ namespace VSDiTask.Users.Models
             public string DeptName { get; set; }
             public string RoleId { get; set; }
             public string RoleName { get; set; }
+            public string TitleId { get; set; }
+            public string TitleName { get; set; }
             public DateTimeOffset createdDate { get; set; }
             public string? createdId { get; set; }
             public DateTimeOffset updateDate { get; set; }
