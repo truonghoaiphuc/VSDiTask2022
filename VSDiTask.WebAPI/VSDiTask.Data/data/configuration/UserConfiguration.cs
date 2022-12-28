@@ -21,7 +21,6 @@ namespace VSDiTask.Infrastructure.data.configuration
             builder.Property(x => x.FirstName).HasMaxLength(250);
             builder.Property(x => x.LastName).HasMaxLength(250);
             builder.Property(x => x.Address).HasMaxLength(250);
-            builder.Property(x => x.Avatar).HasMaxLength(250);
             builder.Property(x => x.CreatedAt).HasDefaultValueSql("getutcdate()");
         }
     }

@@ -58,7 +58,7 @@ namespace VSDiTask.Users.Services
                 Address = request.Address,
                 Gender = request.Gender,
                 Avatar = request.Avatar,
-                Status = UserStatus.InActive,
+                Status = request.Status,
                 DeptId = request.DeptId,
                 RoleId = request.RoleId,
                 TitleId = request.TitleId

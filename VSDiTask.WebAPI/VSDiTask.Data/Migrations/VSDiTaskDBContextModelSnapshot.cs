@@ -434,8 +434,7 @@ namespace VSDiTask.Core.Migrations
                         .HasColumnType("nvarchar(250)");
 
                     b.Property<string>("Avatar")
-                        .HasMaxLength(250)
-                        .HasColumnType("nvarchar(250)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTimeOffset>("CreatedAt")
                         .ValueGeneratedOnAdd()
