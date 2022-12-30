@@ -18,6 +18,7 @@ namespace VSDiTask.Users.Services
         Task<CreateUser.ResponseUser> AddUserAsync(CreateUser.RequestUser request);
         Task<CreateUser.ResponseUser> DeleteUserAsync(long id);
         Task<GetUser.Response> GetUserByAsync(string username);
+        Task<GetUser.Response> GetUserDetailAsync(long id);
         Task<List<GetListUser.Response>> GetListUserAsync();
 
     }
@@ -135,6 +136,28 @@ namespace VSDiTask.Users.Services
                             CanDelete = c.CanDelete
                         })
                         .ToList()
+                })
+                .FirstOrDefaultAsync();
+        }
+
+        public async Task<GetUser.Response> GetUserDetailAsync(long id)
+        {
+            using var context = _dbContextFactory.CreateDbContext();
+            return await context.AppUsers
+                .Where(r => r.Id == id)
+                .Select(x => new GetUser.Response
+                {
+                    UserName = x.UserName,
+                    FirstName = x.FirstName,
+                    LastName = x.LastName,
+                    PhoneNumber = x.PhoneNumber,
+                    Address = x.Address,
+                    DateOfBirth = x.DateOfBirth,
+                    Gender = x.Gender,
+                    Avatar = x.Avatar,
+                    DeptName = x.Department.DeptName,
+                    RoleName = x.Role.RoleName,
+                    TitleName = x.Title.TitleName
                 })
                 .FirstOrDefaultAsync();
         }

@@ -27,6 +27,13 @@ namespace VSDiTask.WebAPI.Controllers
             return Ok(result);
         }
 
+        [HttpGet("{id}")]
+        public async Task<IActionResult> GetUserDetail(long id)
+        {
+            var result = await _userService.GetUserDetailAsync(id);
+            return Ok(result);
+        }
+
         [HttpGet("{username}")]
         public async Task<IActionResult> GetUserPermissionBy(string username)
         {
