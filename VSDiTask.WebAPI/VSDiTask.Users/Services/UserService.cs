@@ -16,6 +16,7 @@ namespace VSDiTask.Users.Services
         Task<UserToken> GetUserTokenInfoAsync(string username);
 
         Task<CreateUser.ResponseUser> AddUserAsync(CreateUser.RequestUser request);
+        Task<CreateUser.ResponseUser> UpdateUserAsync(CreateUser.RequestUser request);
         Task<CreateUser.ResponseUser> DeleteUserAsync(long id);
         Task<GetUser.Response> GetUserByAsync(string username);
         Task<GetUser.Response> GetUserDetailAsync(long id);
@@ -69,6 +70,41 @@ namespace VSDiTask.Users.Services
             return new CreateUser.ResponseUser(true);
         }
 
+        public async Task<CreateUser.ResponseUser> UpdateUserAsync(CreateUser.RequestUser request)
+        {
+            request.MustNotBeNull();
+            request.UserName.MustNotBeNullOrWhiteSpace();
+            //request.CompName.MustNotBeNullOrEmpty();
+
+            CreateUser.ResponseUser FailedResult(StatusCode statuscode)
+            {
+                return new CreateUser.ResponseUser(statuscode);
+            }
+            using var context = _dbContextFactory.CreateDbContext();
+
+            var us = await context.AppUsers.Where(x => x.Id == request.Id).FirstOrDefaultAsync();
+            if (us == null)
+                return new CreateUser.ResponseUser(StatusCode.User_not_exist);
+
+            us.UserName = request.UserName;
+            us.FirstName = request.FirstName;
+            us.LastName = request.LastName;
+            us.Email = request.Email;
+            us.DateOfBirth = request.DateOfBirth;
+            us.PhoneNumber = request.PhoneNumber;
+            us.Address = request.Address;
+            us.Gender = request.Gender;
+            us.Avatar = request.Avatar;
+            us.Status = request.Status;
+            us.DeptId = request.DeptId;
+            us.RoleId = request.RoleId;
+            us.TitleId = request.TitleId;
+            us.UpdatedAt = DateTime.UtcNow;
+            context.Update(us);
+            await context.SaveChangesAsync();
+            return new CreateUser.ResponseUser(true);
+        }
+
         public async Task<CreateUser.ResponseUser> DeleteUserAsync(long id)
         {
             using var context = _dbContextFactory.CreateDbContext();
@@ -93,6 +129,7 @@ namespace VSDiTask.Users.Services
                     LastName = x.LastName,
                     PhoneNumber = x.PhoneNumber,
                     Address = x.Address,
+                    Email = x.Email,
                     DateOfBirth = x.DateOfBirth,
                     Gender = x.Gender,
                     Avatar = x.Avatar,

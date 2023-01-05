@@ -20,6 +20,13 @@ namespace VSDiTask.WebAPI.Controllers
             return Ok(comp);
         }
 
+        [HttpPut("update")]
+        public async Task<IActionResult> UpdateUser(VSDiTask.Users.Models.CreateUser.RequestUser request)
+        {
+            var comp = await _userService.UpdateUserAsync(request);
+            return Ok(comp);
+        }
+
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteUser(long id)
         {
@@ -27,7 +34,7 @@ namespace VSDiTask.WebAPI.Controllers
             return Ok(result);
         }
 
-        [HttpGet("{id}")]
+        [HttpGet("{id}/detail")]
         public async Task<IActionResult> GetUserDetail(long id)
         {
             var result = await _userService.GetUserDetailAsync(id);
