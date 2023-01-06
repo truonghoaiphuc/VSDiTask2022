@@ -22,6 +22,8 @@ namespace VSDiTask.Users.Models
             public string DeptId { get; set; }
             public string RoleId { get; set; }
             public string TitleId { get; set; }
+            public string createdId { get; set; }
+            public string updatedId { get; set; }
         }
 
         public class ResponseUser : Result

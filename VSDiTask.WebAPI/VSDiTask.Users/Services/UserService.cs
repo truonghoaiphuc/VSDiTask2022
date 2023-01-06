@@ -63,7 +63,9 @@ namespace VSDiTask.Users.Services
                 Status = request.Status,
                 DeptId = request.DeptId,
                 RoleId = request.RoleId,
-                TitleId = request.TitleId
+                TitleId = request.TitleId,
+                CreatedId = request.createdId,
+                CreatedAt = DateTime.UtcNow
             }).Entity;
 
             await context.SaveChangesAsync();
@@ -99,6 +101,7 @@ namespace VSDiTask.Users.Services
             us.DeptId = request.DeptId;
             us.RoleId = request.RoleId;
             us.TitleId = request.TitleId;
+            us.UpdatedId = request.updatedId;
             us.UpdatedAt = DateTime.UtcNow;
             context.Update(us);
             await context.SaveChangesAsync();
@@ -141,7 +144,9 @@ namespace VSDiTask.Users.Services
                     TitleId = x.TitleId,
                     TitleName = x.Title.TitleName,
                     createdDate = x.CreatedAt,
-                    createdId = x.CreatedId
+                    createdId = x.CreatedId,
+                    updateDate = x.UpdatedAt,
+                    updateId = x.UpdatedId,
                 })
                 .ToListAsync();
         }
