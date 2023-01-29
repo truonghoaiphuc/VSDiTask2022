@@ -51,7 +51,7 @@ namespace VSDiTask.WebAPI.Controllers
             return Ok(role);
         }
 
-        [HttpDelete("delete")]
+        [HttpPut("delete")]
         public async Task<IActionResult> Delete(string code)
         {
             var role = await _roleService.DeleteRoleAsync(code);

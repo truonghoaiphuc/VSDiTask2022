@@ -67,7 +67,8 @@ namespace VSDiTask.Roles.Services
             if (role == null)
                 return FailedResult(StatusCode.Role_not_exist);
 
-            var entity = context.Role.Remove(role).Entity;
+            role.deleted = true;
+            context.Role.Update(role);
 
             await context.SaveChangesAsync();
             return new CreateRole.Response(true);
@@ -77,7 +78,7 @@ namespace VSDiTask.Roles.Services
         {
             using var context = _vsdiTaskDbContextFactory.CreateDbContext();
             return await context.Role
-                .Where(r => r.RoleId == request.RoleId)
+                .Where(r => r.RoleId == request.RoleId && r.deleted == false)
                 .Select(x => new GetRole.Response
                 {
                     RoleId = x.RoleId,
@@ -104,6 +105,7 @@ namespace VSDiTask.Roles.Services
         {
             using var context = _vsdiTaskDbContextFactory.CreateDbContext();
             return await context.Role
+                .Where(r => r.deleted == false)
                 .Select(x => new GetRole.Response
                 {
                     RoleId = x.RoleId,
@@ -126,7 +128,7 @@ namespace VSDiTask.Roles.Services
             }
             using var context = _vsdiTaskDbContextFactory.CreateDbContext();
 
-            var role = await context.Role.Where(x => x.RoleId == request.RoleId).FirstOrDefaultAsync();
+            var role = await context.Role.Where(x => x.RoleId == request.RoleId && x.deleted == false).FirstOrDefaultAsync();
             if (role == null)
                 return FailedResult(StatusCode.Role_not_exist);
 

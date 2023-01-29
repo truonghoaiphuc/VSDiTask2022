@@ -27,10 +27,22 @@ namespace VSDiTask.WebAPI.Controllers
             return Ok(comp);
         }
 
-        [HttpDelete("{id}")]
+        [HttpPut("{id}/delete")]
         public async Task<IActionResult> DeleteUser(long id)
         {
             var result = await _userService.DeleteUserAsync(id);
+            return Ok(result);
+        }
+
+        /// <summary>
+        /// Active or Inactive user
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        [HttpPut("{id}/active")]
+        public async Task<IActionResult> ActiveUser(long id)
+        {
+            var result = await _userService.ActiveUserAsync(id);
             return Ok(result);
         }
 

@@ -18,6 +18,7 @@ namespace VSDiTask.Users.Services
         Task<CreateUser.ResponseUser> AddUserAsync(CreateUser.RequestUser request);
         Task<CreateUser.ResponseUser> UpdateUserAsync(CreateUser.RequestUser request);
         Task<CreateUser.ResponseUser> DeleteUserAsync(long id);
+        Task<CreateUser.ResponseUser> ActiveUserAsync(long id);
         Task<GetUser.Response> GetUserByAsync(string username);
         Task<GetUser.Response> GetUserDetailAsync(long id);
         Task<List<GetListUser.Response>> GetListUserAsync();
@@ -114,7 +115,21 @@ namespace VSDiTask.Users.Services
             var us = await context.AppUsers.Where(x => x.Id == id).FirstOrDefaultAsync();
             if (us == null)
                 return new CreateUser.ResponseUser(StatusCode.User_not_exist);
-            context.AppUsers.Remove(us);
+            us.deleted = true;
+            await context.SaveChangesAsync();
+            return new CreateUser.ResponseUser(true);
+        }
+
+        public async Task<CreateUser.ResponseUser> ActiveUserAsync(long id)
+        {
+            using var context = _dbContextFactory.CreateDbContext();
+            var us = await context.AppUsers.Where(x => x.Id == id).FirstOrDefaultAsync();
+            if (us == null)
+                return new CreateUser.ResponseUser(StatusCode.User_not_exist);
+
+            us.Status = us.Status == UserStatus.Active ? UserStatus.InActive : UserStatus.Active;
+            context.AppUsers.Update(us);
+
             await context.SaveChangesAsync();
             return new CreateUser.ResponseUser(true);
         }
@@ -124,6 +139,7 @@ namespace VSDiTask.Users.Services
             using var context = _dbContextFactory.CreateDbContext();
 
             return await context.AppUsers
+                .Where(x => x.deleted == false)
                 .Select(x => new GetListUser.Response
                 {
                     Id = x.Id,
@@ -155,7 +171,7 @@ namespace VSDiTask.Users.Services
         {
             using var context = _dbContextFactory.CreateDbContext();
             return await context.AppUsers
-                .Where(r => r.UserName == username)
+                .Where(r => r.UserName == username && r.deleted == false)
                 .Select(x => new GetUser.Response
                 {
                     UserName = x.UserName,
@@ -186,7 +202,7 @@ namespace VSDiTask.Users.Services
         {
             using var context = _dbContextFactory.CreateDbContext();
             return await context.AppUsers
-                .Where(r => r.Id == id)
+                .Where(r => r.Id == id && r.deleted == false)
                 .Select(x => new GetUser.Response
                 {
                     UserName = x.UserName,
@@ -225,7 +241,7 @@ namespace VSDiTask.Users.Services
 
             var hash = HashExtensions.Hash(user.Password);
             var valid = await context.AppUsers
-                .Where(u => u.UserName == user.UserName && u.Password == hash && u.Status == UserStatus.Active)
+                .Where(u => u.UserName == user.UserName && u.Password == hash && u.Status == UserStatus.Active && u.deleted == false)
                 .AnyAsync();
             return valid;
         }

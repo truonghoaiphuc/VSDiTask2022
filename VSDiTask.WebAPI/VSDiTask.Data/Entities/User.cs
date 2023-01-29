@@ -23,6 +23,7 @@ namespace VSDiTask.Core.Entities
         public Role Role { get; set; }
         public string TitleId { get; set; }
         public Title Title { get; set; }
+        public bool deleted { get; set; } = false;
 
 
         public List<Permission> Permissions { get; set; } = new List<Permission>();

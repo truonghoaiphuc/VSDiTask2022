@@ -18,6 +18,7 @@ namespace VSDiTask.Infrastructure.data.configuration
                 .HasMaxLength(250);
             builder.HasIndex(x => x.RoleId)
                 .IsUnique();
+            builder.Property(x => x.deleted).HasDefaultValue<bool>(false);
         }
     }
 }
