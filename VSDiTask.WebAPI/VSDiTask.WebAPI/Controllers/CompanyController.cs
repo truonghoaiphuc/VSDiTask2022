@@ -44,7 +44,7 @@ namespace VSDiTask.WebAPI.Controllers
             return Ok(comp);
         }
 
-        [HttpDelete("delete")]
+        [HttpPut("delete")]
         public async Task<IActionResult> Delete(string code)
         {
             var comp = await _companyService.DeleteCompanyAsync(new VSDiTask.Services.Models.AddCompany.Request { CompCode = code });

@@ -11,5 +11,6 @@ namespace VSDiTask.Core.Entities
         [ForeignKey("Company")]
         public string Branch { get; set; }
         public Company Company { get; set; }
+        public bool deleted { get; set; }
     }
 }

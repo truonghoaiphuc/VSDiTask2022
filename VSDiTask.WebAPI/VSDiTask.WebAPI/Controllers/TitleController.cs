@@ -19,5 +19,29 @@ namespace VSDiTask.WebAPI.Controllers
             var result = await _titleService.GetTitlesAsync();
             return Ok(result);
         }
+
+        [HttpPut("update")]
+        public async Task<IActionResult> UpdateTitle(VSDiTask.Titles.Models.CreateTitle.RequestTitle request)
+        {
+            var role = await _titleService.UpdateTitlesAsync(request);
+            return Ok(role);
+        }
+
+        [HttpPost("add")]
+        public async Task<IActionResult> AddTitle(VSDiTask.Titles.Models.CreateTitle.RequestTitle request)
+        {
+            if (!ModelState.IsValid)
+                return BadRequest();
+
+            var role = await _titleService.CreateTitlesAsync(request);
+            return Ok(role);
+        }
+
+        [HttpPut("delete")]
+        public async Task<IActionResult> Delete(VSDiTask.Titles.Models.CreateTitle.RequestTitle request)
+        {
+            var role = await _titleService.DeleteTitlesAsync(request);
+            return Ok(role);
+        }
     }
 }

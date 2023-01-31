@@ -8,5 +8,6 @@ namespace VSDiTask.Core.Entities
         public string TitleId { get; set; }
         public string TitleName { get; set; }
         public string Description { get; set; }
+        public bool deleted { get; set; }
     }
 }

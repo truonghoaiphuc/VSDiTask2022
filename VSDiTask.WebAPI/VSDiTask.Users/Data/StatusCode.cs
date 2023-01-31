@@ -20,5 +20,9 @@ namespace VSDiTask.Users.Data
         Role_already_exist = 8,
         [Description("Nhóm người dùng không tồn tại trong hệ thống")]
         Role_not_exist = 9,
+        [Description("Chức danh đã tồn tại trong hệ thống")]
+        Title_already_exist = 10,
+        [Description("Chức danh không tồn tại trong hệ thống")]
+        Title_not_exist = 11,
     }
 }

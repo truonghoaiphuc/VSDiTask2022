@@ -66,7 +66,9 @@ namespace VSDiTask.Services.Services
             if (dep == null)
                 return FailedResult(StatusCode.Department_not_exist);
 
-            var entity = context.Departments.Remove(dep).Entity;
+            dep.deleted = true;
+
+            context.Departments.Update(dep);
 
             await context.SaveChangesAsync();
             return new AddDepartment.Response(true);

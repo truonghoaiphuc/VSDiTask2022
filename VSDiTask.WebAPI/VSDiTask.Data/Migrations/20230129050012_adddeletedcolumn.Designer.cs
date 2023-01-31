@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using VSDiTask.Core.Data;
 
@@ -11,9 +12,10 @@ using VSDiTask.Core.Data;
 namespace VSDiTask.Core.Migrations
 {
     [DbContext(typeof(VSDiTaskDBContext))]
-    partial class VSDiTaskDBContextModelSnapshot : ModelSnapshot
+    [Migration("20230129050012_adddeletedcolumn")]
+    partial class adddeletedcolumn
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -87,11 +89,6 @@ namespace VSDiTask.Core.Migrations
                         .HasMaxLength(250)
                         .HasColumnType("nvarchar(250)");
 
-                    b.Property<bool>("deleted")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("bit")
-                        .HasDefaultValue(false);
-
                     b.HasKey("CompCode");
 
                     b.HasIndex("CompCode")
@@ -114,11 +111,6 @@ namespace VSDiTask.Core.Migrations
                         .IsRequired()
                         .HasMaxLength(250)
                         .HasColumnType("nvarchar(250)");
-
-                    b.Property<bool>("deleted")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("bit")
-                        .HasDefaultValue(false);
 
                     b.HasKey("DeptCode");
 
@@ -427,9 +419,6 @@ namespace VSDiTask.Core.Migrations
                         .IsRequired()
                         .HasMaxLength(250)
                         .HasColumnType("nvarchar(250)");
-
-                    b.Property<bool>("deleted")
-                        .HasColumnType("bit");
 
                     b.HasKey("TitleId");
 

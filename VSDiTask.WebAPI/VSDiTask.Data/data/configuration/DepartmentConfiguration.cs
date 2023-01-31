@@ -20,6 +20,7 @@ namespace VSDiTask.Infrastructure.data.configuration
                 .IsUnique();
             builder.Property(x => x.Branch)
                 .IsRequired();
+            builder.Property(x => x.deleted).HasDefaultValue<bool>(false);
         }
     }
 }
