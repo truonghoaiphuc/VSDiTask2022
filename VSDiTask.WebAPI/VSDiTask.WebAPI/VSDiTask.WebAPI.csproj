@@ -17,6 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\VSDiTask.CATypes\VSDiTask.CATypes.csproj" />
     <ProjectReference Include="..\VSdiTask.Common.Extensions\VSDiTask.Common.Extensions.csproj" />
     <ProjectReference Include="..\VSDiTask.Companies\VSDiTask.Companies.csproj" />
     <ProjectReference Include="..\VSDiTask.Data\VSDiTask.Core.csproj" />

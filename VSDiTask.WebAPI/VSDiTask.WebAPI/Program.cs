@@ -1,3 +1,4 @@
+using VSDiTask.CATypes;
 using VSDiTask.Core;
 using VSDiTask.Roles;
 using VSDiTask.Services;
@@ -24,6 +25,7 @@ builder.Services
     .AddDepartmentServices()
     .AddRoleServices()
     .AddTitleServices()
+    .AddCATypeServices()
     .AddCors(p => p.AddPolicy("corspolicy", build =>
     {
         build.WithOrigins("*").AllowAnyMethod().AllowAnyHeader();

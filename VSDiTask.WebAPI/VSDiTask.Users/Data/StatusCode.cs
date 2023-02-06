@@ -24,5 +24,9 @@ namespace VSDiTask.Users.Data
         Title_already_exist = 10,
         [Description("Chức danh không tồn tại trong hệ thống")]
         Title_not_exist = 11,
+        [Description("Loại quyền đã tồn tại trong hệ thống")]
+        CAType_already_exist = 12,
+        [Description("Loại quyền không tồn tại trong hệ thống")]
+        CAType_not_exist = 13,
     }
 }
