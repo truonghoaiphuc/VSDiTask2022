@@ -1,0 +1,12 @@
+E:\Coding\VSDiTask2022\VSDiTask.WebAPI\VSdiTask.Common.Extensions\bin\Debug\net6.0\VSDiTask.Common.Extensions.deps.json
+E:\Coding\VSDiTask2022\VSDiTask.WebAPI\VSdiTask.Common.Extensions\bin\Debug\net6.0\VSDiTask.Common.Extensions.dll
+E:\Coding\VSDiTask2022\VSDiTask.WebAPI\VSdiTask.Common.Extensions\bin\Debug\net6.0\VSDiTask.Common.Extensions.pdb
+E:\Coding\VSDiTask2022\VSDiTask.WebAPI\VSdiTask.Common.Extensions\obj\Debug\net6.0\VSDiTask.Common.Extensions.csproj.AssemblyReference.cache
+E:\Coding\VSDiTask2022\VSDiTask.WebAPI\VSdiTask.Common.Extensions\obj\Debug\net6.0\VSDiTask.Common.Extensions.GeneratedMSBuildEditorConfig.editorconfig
+E:\Coding\VSDiTask2022\VSDiTask.WebAPI\VSdiTask.Common.Extensions\obj\Debug\net6.0\VSDiTask.Common.Extensions.AssemblyInfoInputs.cache
+E:\Coding\VSDiTask2022\VSDiTask.WebAPI\VSdiTask.Common.Extensions\obj\Debug\net6.0\VSDiTask.Common.Extensions.AssemblyInfo.cs
+E:\Coding\VSDiTask2022\VSDiTask.WebAPI\VSdiTask.Common.Extensions\obj\Debug\net6.0\VSDiTask.Common.Extensions.csproj.CoreCompileInputs.cache
+E:\Coding\VSDiTask2022\VSDiTask.WebAPI\VSdiTask.Common.Extensions\obj\Debug\net6.0\VSDiTask.Common.Extensions.dll
+E:\Coding\VSDiTask2022\VSDiTask.WebAPI\VSdiTask.Common.Extensions\obj\Debug\net6.0\refint\VSDiTask.Common.Extensions.dll
+E:\Coding\VSDiTask2022\VSDiTask.WebAPI\VSdiTask.Common.Extensions\obj\Debug\net6.0\VSDiTask.Common.Extensions.pdb
+E:\Coding\VSDiTask2022\VSDiTask.WebAPI\VSdiTask.Common.Extensions\obj\Debug\net6.0\ref\VSDiTask.Common.Extensions.dll

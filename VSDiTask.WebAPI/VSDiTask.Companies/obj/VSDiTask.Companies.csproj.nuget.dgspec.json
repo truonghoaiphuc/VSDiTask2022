@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Code\\VSDiTasks\\VSDiTask.WebAPI\\VSDiTask.Companies\\VSDiTask.Companies.csproj": {}
+    "E:\\Coding\\VSDiTask2022\\VSDiTask.WebAPI\\VSDiTask.Companies\\VSDiTask.Companies.csproj": {}
   },
   "projects": {
-    "E:\\Code\\VSDiTasks\\VSDiTask.WebAPI\\VSdiTask.Common.Extensions\\VSDiTask.Common.Extensions.csproj": {
+    "E:\\Coding\\VSDiTask2022\\VSDiTask.WebAPI\\VSdiTask.Common.Extensions\\VSDiTask.Common.Extensions.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Code\\VSDiTasks\\VSDiTask.WebAPI\\VSdiTask.Common.Extensions\\VSDiTask.Common.Extensions.csproj",
+        "projectUniqueName": "E:\\Coding\\VSDiTask2022\\VSDiTask.WebAPI\\VSdiTask.Common.Extensions\\VSDiTask.Common.Extensions.csproj",
         "projectName": "VSDiTask.Common.Extensions",
-        "projectPath": "E:\\Code\\VSDiTasks\\VSDiTask.WebAPI\\VSdiTask.Common.Extensions\\VSDiTask.Common.Extensions.csproj",
-        "packagesPath": "C:\\Users\\truon\\.nuget\\packages\\",
-        "outputPath": "E:\\Code\\VSDiTasks\\VSDiTask.WebAPI\\VSdiTask.Common.Extensions\\obj\\",
+        "projectPath": "E:\\Coding\\VSDiTask2022\\VSDiTask.WebAPI\\VSdiTask.Common.Extensions\\VSDiTask.Common.Extensions.csproj",
+        "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
+        "outputPath": "E:\\Coding\\VSDiTask2022\\VSDiTask.WebAPI\\VSdiTask.Common.Extensions\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\truon\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,7 +22,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://www.nuget.org/api/v2/curated-feeds/microsoftdotnet/": {}
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
@@ -59,17 +59,17 @@
         }
       }
     },
-    "E:\\Code\\VSDiTasks\\VSDiTask.WebAPI\\VSDiTask.Companies\\VSDiTask.Companies.csproj": {
+    "E:\\Coding\\VSDiTask2022\\VSDiTask.WebAPI\\VSDiTask.Companies\\VSDiTask.Companies.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Code\\VSDiTasks\\VSDiTask.WebAPI\\VSDiTask.Companies\\VSDiTask.Companies.csproj",
+        "projectUniqueName": "E:\\Coding\\VSDiTask2022\\VSDiTask.WebAPI\\VSDiTask.Companies\\VSDiTask.Companies.csproj",
         "projectName": "VSDiTask.Companies",
-        "projectPath": "E:\\Code\\VSDiTasks\\VSDiTask.WebAPI\\VSDiTask.Companies\\VSDiTask.Companies.csproj",
-        "packagesPath": "C:\\Users\\truon\\.nuget\\packages\\",
-        "outputPath": "E:\\Code\\VSDiTasks\\VSDiTask.WebAPI\\VSDiTask.Companies\\obj\\",
+        "projectPath": "E:\\Coding\\VSDiTask2022\\VSDiTask.WebAPI\\VSDiTask.Companies\\VSDiTask.Companies.csproj",
+        "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
+        "outputPath": "E:\\Coding\\VSDiTask2022\\VSDiTask.WebAPI\\VSDiTask.Companies\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\truon\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -77,20 +77,20 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://www.nuget.org/api/v2/curated-feeds/microsoftdotnet/": {}
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "E:\\Code\\VSDiTasks\\VSDiTask.WebAPI\\VSDiTask.Data\\VSDiTask.Core.csproj": {
-                "projectPath": "E:\\Code\\VSDiTasks\\VSDiTask.WebAPI\\VSDiTask.Data\\VSDiTask.Core.csproj"
+              "E:\\Coding\\VSDiTask2022\\VSDiTask.WebAPI\\VSDiTask.Data\\VSDiTask.Core.csproj": {
+                "projectPath": "E:\\Coding\\VSDiTask2022\\VSDiTask.WebAPI\\VSDiTask.Data\\VSDiTask.Core.csproj"
               },
-              "E:\\Code\\VSDiTasks\\VSDiTask.WebAPI\\VSDiTask.Services\\VSDiTask.Departments.csproj": {
-                "projectPath": "E:\\Code\\VSDiTasks\\VSDiTask.WebAPI\\VSDiTask.Services\\VSDiTask.Departments.csproj"
+              "E:\\Coding\\VSDiTask2022\\VSDiTask.WebAPI\\VSDiTask.Services\\VSDiTask.Departments.csproj": {
+                "projectPath": "E:\\Coding\\VSDiTask2022\\VSDiTask.WebAPI\\VSDiTask.Services\\VSDiTask.Departments.csproj"
               },
-              "E:\\Code\\VSDiTasks\\VSDiTask.WebAPI\\VSDiTask.Users\\VSDiTask.Users.csproj": {
-                "projectPath": "E:\\Code\\VSDiTasks\\VSDiTask.WebAPI\\VSDiTask.Users\\VSDiTask.Users.csproj"
+              "E:\\Coding\\VSDiTask2022\\VSDiTask.WebAPI\\VSDiTask.Users\\VSDiTask.Users.csproj": {
+                "projectPath": "E:\\Coding\\VSDiTask2022\\VSDiTask.WebAPI\\VSDiTask.Users\\VSDiTask.Users.csproj"
               }
             }
           }
@@ -130,17 +130,17 @@
         }
       }
     },
-    "E:\\Code\\VSDiTasks\\VSDiTask.WebAPI\\VSDiTask.Data\\VSDiTask.Core.csproj": {
+    "E:\\Coding\\VSDiTask2022\\VSDiTask.WebAPI\\VSDiTask.Data\\VSDiTask.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Code\\VSDiTasks\\VSDiTask.WebAPI\\VSDiTask.Data\\VSDiTask.Core.csproj",
+        "projectUniqueName": "E:\\Coding\\VSDiTask2022\\VSDiTask.WebAPI\\VSDiTask.Data\\VSDiTask.Core.csproj",
         "projectName": "VSDiTask.Core",
-        "projectPath": "E:\\Code\\VSDiTasks\\VSDiTask.WebAPI\\VSDiTask.Data\\VSDiTask.Core.csproj",
-        "packagesPath": "C:\\Users\\truon\\.nuget\\packages\\",
-        "outputPath": "E:\\Code\\VSDiTasks\\VSDiTask.WebAPI\\VSDiTask.Data\\obj\\",
+        "projectPath": "E:\\Coding\\VSDiTask2022\\VSDiTask.WebAPI\\VSDiTask.Data\\VSDiTask.Core.csproj",
+        "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
+        "outputPath": "E:\\Coding\\VSDiTask2022\\VSDiTask.WebAPI\\VSDiTask.Data\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\truon\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -148,7 +148,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://www.nuget.org/api/v2/curated-feeds/microsoftdotnet/": {}
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
@@ -207,17 +207,17 @@
         }
       }
     },
-    "E:\\Code\\VSDiTasks\\VSDiTask.WebAPI\\VSDiTask.Infrastructure\\VSDiTask.Infrastructure.csproj": {
+    "E:\\Coding\\VSDiTask2022\\VSDiTask.WebAPI\\VSDiTask.Infrastructure\\VSDiTask.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Code\\VSDiTasks\\VSDiTask.WebAPI\\VSDiTask.Infrastructure\\VSDiTask.Infrastructure.csproj",
+        "projectUniqueName": "E:\\Coding\\VSDiTask2022\\VSDiTask.WebAPI\\VSDiTask.Infrastructure\\VSDiTask.Infrastructure.csproj",
         "projectName": "VSDiTask.Infrastructure",
-        "projectPath": "E:\\Code\\VSDiTasks\\VSDiTask.WebAPI\\VSDiTask.Infrastructure\\VSDiTask.Infrastructure.csproj",
-        "packagesPath": "C:\\Users\\truon\\.nuget\\packages\\",
-        "outputPath": "E:\\Code\\VSDiTasks\\VSDiTask.WebAPI\\VSDiTask.Infrastructure\\obj\\",
+        "projectPath": "E:\\Coding\\VSDiTask2022\\VSDiTask.WebAPI\\VSDiTask.Infrastructure\\VSDiTask.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
+        "outputPath": "E:\\Coding\\VSDiTask2022\\VSDiTask.WebAPI\\VSDiTask.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\truon\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -225,14 +225,14 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://www.nuget.org/api/v2/curated-feeds/microsoftdotnet/": {}
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "E:\\Code\\VSDiTasks\\VSDiTask.WebAPI\\VSDiTask.Data\\VSDiTask.Core.csproj": {
-                "projectPath": "E:\\Code\\VSDiTasks\\VSDiTask.WebAPI\\VSDiTask.Data\\VSDiTask.Core.csproj"
+              "E:\\Coding\\VSDiTask2022\\VSDiTask.WebAPI\\VSDiTask.Data\\VSDiTask.Core.csproj": {
+                "projectPath": "E:\\Coding\\VSDiTask2022\\VSDiTask.WebAPI\\VSDiTask.Data\\VSDiTask.Core.csproj"
               }
             }
           }
@@ -276,17 +276,17 @@
         }
       }
     },
-    "E:\\Code\\VSDiTasks\\VSDiTask.WebAPI\\VSDiTask.Services\\VSDiTask.Departments.csproj": {
+    "E:\\Coding\\VSDiTask2022\\VSDiTask.WebAPI\\VSDiTask.Services\\VSDiTask.Departments.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Code\\VSDiTasks\\VSDiTask.WebAPI\\VSDiTask.Services\\VSDiTask.Departments.csproj",
+        "projectUniqueName": "E:\\Coding\\VSDiTask2022\\VSDiTask.WebAPI\\VSDiTask.Services\\VSDiTask.Departments.csproj",
         "projectName": "VSDiTask.Departments",
-        "projectPath": "E:\\Code\\VSDiTasks\\VSDiTask.WebAPI\\VSDiTask.Services\\VSDiTask.Departments.csproj",
-        "packagesPath": "C:\\Users\\truon\\.nuget\\packages\\",
-        "outputPath": "E:\\Code\\VSDiTasks\\VSDiTask.WebAPI\\VSDiTask.Services\\obj\\",
+        "projectPath": "E:\\Coding\\VSDiTask2022\\VSDiTask.WebAPI\\VSDiTask.Services\\VSDiTask.Departments.csproj",
+        "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
+        "outputPath": "E:\\Coding\\VSDiTask2022\\VSDiTask.WebAPI\\VSDiTask.Services\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\truon\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -294,20 +294,20 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://www.nuget.org/api/v2/curated-feeds/microsoftdotnet/": {}
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "E:\\Code\\VSDiTasks\\VSDiTask.WebAPI\\VSDiTask.Data\\VSDiTask.Core.csproj": {
-                "projectPath": "E:\\Code\\VSDiTasks\\VSDiTask.WebAPI\\VSDiTask.Data\\VSDiTask.Core.csproj"
+              "E:\\Coding\\VSDiTask2022\\VSDiTask.WebAPI\\VSDiTask.Data\\VSDiTask.Core.csproj": {
+                "projectPath": "E:\\Coding\\VSDiTask2022\\VSDiTask.WebAPI\\VSDiTask.Data\\VSDiTask.Core.csproj"
               },
-              "E:\\Code\\VSDiTasks\\VSDiTask.WebAPI\\VSDiTask.Infrastructure\\VSDiTask.Infrastructure.csproj": {
-                "projectPath": "E:\\Code\\VSDiTasks\\VSDiTask.WebAPI\\VSDiTask.Infrastructure\\VSDiTask.Infrastructure.csproj"
+              "E:\\Coding\\VSDiTask2022\\VSDiTask.WebAPI\\VSDiTask.Infrastructure\\VSDiTask.Infrastructure.csproj": {
+                "projectPath": "E:\\Coding\\VSDiTask2022\\VSDiTask.WebAPI\\VSDiTask.Infrastructure\\VSDiTask.Infrastructure.csproj"
               },
-              "E:\\Code\\VSDiTasks\\VSDiTask.WebAPI\\VSDiTask.Users\\VSDiTask.Users.csproj": {
-                "projectPath": "E:\\Code\\VSDiTasks\\VSDiTask.WebAPI\\VSDiTask.Users\\VSDiTask.Users.csproj"
+              "E:\\Coding\\VSDiTask2022\\VSDiTask.WebAPI\\VSDiTask.Users\\VSDiTask.Users.csproj": {
+                "projectPath": "E:\\Coding\\VSDiTask2022\\VSDiTask.WebAPI\\VSDiTask.Users\\VSDiTask.Users.csproj"
               }
             }
           }
@@ -347,17 +347,17 @@
         }
       }
     },
-    "E:\\Code\\VSDiTasks\\VSDiTask.WebAPI\\VSDiTask.Users\\VSDiTask.Users.csproj": {
+    "E:\\Coding\\VSDiTask2022\\VSDiTask.WebAPI\\VSDiTask.Users\\VSDiTask.Users.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Code\\VSDiTasks\\VSDiTask.WebAPI\\VSDiTask.Users\\VSDiTask.Users.csproj",
+        "projectUniqueName": "E:\\Coding\\VSDiTask2022\\VSDiTask.WebAPI\\VSDiTask.Users\\VSDiTask.Users.csproj",
         "projectName": "VSDiTask.Users",
-        "projectPath": "E:\\Code\\VSDiTasks\\VSDiTask.WebAPI\\VSDiTask.Users\\VSDiTask.Users.csproj",
-        "packagesPath": "C:\\Users\\truon\\.nuget\\packages\\",
-        "outputPath": "E:\\Code\\VSDiTasks\\VSDiTask.WebAPI\\VSDiTask.Users\\obj\\",
+        "projectPath": "E:\\Coding\\VSDiTask2022\\VSDiTask.WebAPI\\VSDiTask.Users\\VSDiTask.Users.csproj",
+        "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
+        "outputPath": "E:\\Coding\\VSDiTask2022\\VSDiTask.WebAPI\\VSDiTask.Users\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\truon\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -365,17 +365,17 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://www.nuget.org/api/v2/curated-feeds/microsoftdotnet/": {}
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "E:\\Code\\VSDiTasks\\VSDiTask.WebAPI\\VSdiTask.Common.Extensions\\VSDiTask.Common.Extensions.csproj": {
-                "projectPath": "E:\\Code\\VSDiTasks\\VSDiTask.WebAPI\\VSdiTask.Common.Extensions\\VSDiTask.Common.Extensions.csproj"
+              "E:\\Coding\\VSDiTask2022\\VSDiTask.WebAPI\\VSdiTask.Common.Extensions\\VSDiTask.Common.Extensions.csproj": {
+                "projectPath": "E:\\Coding\\VSDiTask2022\\VSDiTask.WebAPI\\VSdiTask.Common.Extensions\\VSDiTask.Common.Extensions.csproj"
               },
-              "E:\\Code\\VSDiTasks\\VSDiTask.WebAPI\\VSDiTask.Data\\VSDiTask.Core.csproj": {
-                "projectPath": "E:\\Code\\VSDiTasks\\VSDiTask.WebAPI\\VSDiTask.Data\\VSDiTask.Core.csproj"
+              "E:\\Coding\\VSDiTask2022\\VSDiTask.WebAPI\\VSDiTask.Data\\VSDiTask.Core.csproj": {
+                "projectPath": "E:\\Coding\\VSDiTask2022\\VSDiTask.WebAPI\\VSDiTask.Data\\VSDiTask.Core.csproj"
               }
             }
           }
